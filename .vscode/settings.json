@@ -1,0 +1,33 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "miktex-pdflatex",
+      "command": "C:\\Users\\Catalin\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "miktex-bibtex",
+      "command": "C:\\Users\\Catalin\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.exe",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "MiKTeX pdflatex -> bibtex -> pdflatex * 2",
+      "tools": [
+        "miktex-pdflatex",
+        "miktex-bibtex",
+        "miktex-pdflatex",
+        "miktex-pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "first"
+}

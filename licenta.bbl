@@ -1,0 +1,33 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{THK{\etalchar{+}}13}
+
+\bibitem[BEG{\etalchar{+}}]{Bersani}
+Marcello~M. Bersani, Madalina Erascu, Silvio Ghilardi, Francesco Marconi, and
+  Matteo Rossi.
+\newblock {Formal Verification of Data-Intensive Applications through Model
+  Checking Modulo Theories}.
+
+\bibitem[Jac01]{Jac01}
+D~Jackson.
+\newblock {Lightweight Formal Methods}.
+\newblock In {\em {\{}FME{\}} 2001: Formal Methods for Increasing Software
+  Productivity, International Symposium of Formal Methods Europe, Berlin,
+  Germany, March 12-16, 2001, Proceedings}, 2001.
+
+\bibitem[Neg]{NegotiationModuleSecurityReasoner}
+{Negotiation Module. Security Reasoner}.
+
+\bibitem[NIS13]{NIST80054r4}
+{NIST SP-800-53: Recommended Security Controls for Federal Information
+  Systems}.
+\newblock Technical report, National Institute of Standards and Technology,
+  2013.
+
+\bibitem[THK{\etalchar{+}}13]{TakeshiTakahashi_IEEE_VT_Magazine_2013}
+Takeshi Takahashi, Jarmo Harju, Joona Kannisto, Bilhanan Silverajan, Jarmo
+  Harju, and Shin'ichiro Matsuo.
+\newblock {Tailored security: building nonrepudiable security service level
+  agreements}.
+\newblock {\em IEEE Vehicular Technology Magazine}, 8, jul 2013.
+
+\end{thebibliography}
