@@ -1,13 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  17 MAR 2026 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  26 MAY 2026 10:47
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Catalin/Documents/Facultate FI/Licenta_2026/Latex_licenta_2026/lice
-nta.tex"
-
-(c:/Users/Catalin/Documents/Facultate FI/Licenta_2026/Latex_licenta_2026/licent
-a.tex
+**./licenta.tex
+(licenta.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
@@ -28,6 +24,57 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count284
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2101.
+\U@D=\dimen149
+\l@unhyphenated=\language79
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count285
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/ro\bab
+el-romanian.tex)
+Package babel Info: Importing font and identification data for romanian
+(babel)             from babel-ro.ini. Reported on input line 4320.
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/babel-romanian\romani
+an.ldf
+Language: romanian 2021/04/04 v1.2m Romanian support from the babel system
+))
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
@@ -38,24 +85,24 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen149
+\@emptytoks=\toks19
+\ex@=\dimen150
 ))
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen150
+\pmbraise@=\dimen151
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count284
+\inf@bad=\count286
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count285
-\leftroot@=\count286
+\uproot@=\count287
+\leftroot@=\count288
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count287
-\DOTSCASE@=\count288
+\classnum@=\count289
+\DOTSCASE@=\count290
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -65,48 +112,48 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen151
+\big@size=\dimen152
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count289
+\macc@depth=\count291
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count290
+\c@MaxMatrixCols=\count292
 \dotsspace@=\muskip17
-\c@parentequation=\count291
-\dspbrk@lvl=\count292
-\tag@help=\toks18
-\row@=\count293
-\column@=\count294
-\maxfields@=\count295
-\andhelp@=\toks19
-\eqnshift@=\dimen152
-\alignsep@=\dimen153
-\tagshift@=\dimen154
-\tagwidth@=\dimen155
-\totwidth@=\dimen156
-\lineht@=\dimen157
-\@envbody=\toks20
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks20
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks21
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks22
 \multlinegap=\skip52
 \multlinetaggap=\skip53
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks22
-\thm@bodyfont=\toks23
-\thm@headfont=\toks24
-\thm@notefont=\toks25
-\thm@headpunct=\toks26
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
 \thm@preskip=\skip54
 \thm@postskip=\skip55
 \thm@headsep=\skip56
-\dth@everypar=\toks27
+\dth@everypar=\toks29
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -123,7 +170,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks28
+\KV@toks@=\toks30
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -140,14 +187,455 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 ef
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen158
-\Gin@req@width=\dimen159
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count298
+\Gm@cntv=\count299
+\c@Gm@tempcnt=\count300
+\Gm@bindingoffset=\dimen161
+\Gm@wd@mp=\dimen162
+\Gm@odd@mp=\dimen163
+\Gm@even@mp=\dimen164
+\Gm@layoutwidth=\dimen165
+\Gm@layoutheight=\dimen166
+\Gm@layouthoffset=\dimen167
+\Gm@layoutvoffset=\dimen168
+\Gm@dimlist=\toks31
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.
+sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+ (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count301
+\float@exts=\toks32
+\float@box=\box55
+\@float@everytoks=\toks33
+\@floatcapt=\box56
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks34
+\c@algorithm=\count302
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseud
+ocode.sty
+Package: algpseudocode 
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorith
+micx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count303
+\c@ALG@rem=\count304
+\c@ALG@nested=\count305
+\ALG@tlm=\skip57
+\ALG@thistlm=\skip58
+\c@ALG@Lnr=\count306
+\c@ALG@blocknr=\count307
+\c@ALG@storecount=\count308
+\c@ALG@tmpcounter=\count309
+\ALG@tmplength=\skip59
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count310
+\lst@gtempboxa=\box57
+\lst@token=\toks35
+\lst@length=\count311
+\lst@currlwidth=\dimen169
+\lst@column=\count312
+\lst@pos=\count313
+\lst@lostspace=\dimen170
+\lst@width=\dimen171
+\lst@newlines=\count314
+\lst@lineno=\count315
+\lst@maxwidth=\dimen172
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count316
+\lst@skipnumbers=\count317
+\lst@framebox=\box58
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box59
+\extrarowheight=\dimen174
+\NC@list=\toks36
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box60
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
+z.sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.st
+y
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.
+sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
+il-common.tex
+\pgfutil@everybye=\toks37
+\pgfutil@tempdima=\dimen175
+\pgfutil@tempdimb=\dimen176
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
+il-latex.def
+\pgfutil@abb=\box61
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrc
+s.code.tex
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.te
+x)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcor
+e.sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsy
+s.sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+ys.code.tex
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+yslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks40
+))
+\pgf@x=\dimen177
+\pgf@y=\dimen178
+\pgf@xa=\dimen179
+\pgf@ya=\dimen180
+\pgf@xb=\dimen181
+\pgf@yb=\dimen182
+\pgf@xc=\dimen183
+\pgf@yc=\dimen184
+\pgf@xd=\dimen185
+\pgf@yd=\dimen186
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count318
+\c@pgf@countb=\count319
+\c@pgf@countc=\count320
+\c@pgf@countd=\count321
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
+\pgf@sys@id@count=\count322
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+syssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count323
+\pgfsyssoftpath@bigbuffer@items=\count324
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+ore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
+de.tex
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathuti
+l.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpar
+ser.code.tex
+\pgfmath@dimen=\dimen187
+\pgfmath@count=\count325
+\pgfmath@box=\box62
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.basic.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.trigonometric.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.random.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.comparison.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.base.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.round.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.misc.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.integerarithmetics.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcal
+c.code.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
+at.code.tex
+\c@pgfmathroundto@lastzeros=\count326
+))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.cod
+e.tex)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen188
+\pgf@picmaxx=\dimen189
+\pgf@picminy=\dimen190
+\pgf@picmaxy=\dimen191
+\pgf@pathminx=\dimen192
+\pgf@pathmaxx=\dimen193
+\pgf@pathminy=\dimen194
+\pgf@pathmaxy=\dimen195
+\pgf@xx=\dimen196
+\pgf@xy=\dimen197
+\pgf@yx=\dimen198
+\pgf@yy=\dimen199
+\pgf@zx=\dimen256
+\pgf@zy=\dimen257
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen258
+\pgf@path@lasty=\dimen259
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen260
+\pgf@shorten@start@additional=\dimen261
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box63
+\pgf@hbox=\box64
+\pgf@layerbox@main=\box65
+\pgf@picture@serial@count=\count327
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen262
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen263
+\pgf@pt@y=\dimen264
+\pgf@pt@temp=\dimen265
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen266
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen267
+\pgf@sys@shading@range@num=\count328
+\pgf@shadingcount=\count329
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box66
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+leshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box67
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+leplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
+comp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen268
+\pgf@nodesepend=\dimen269
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
+comp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.
+sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys
+.sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+ys.code.tex))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
+de.tex))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffo
+r.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen270
+\pgffor@skip=\dimen271
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count330
+\pgfplotmarksize=\dimen272
+)
+\tikz@lastx=\dimen273
+\tikz@lasty=\dimen274
+\tikz@lastxsaved=\dimen275
+\tikz@lastysaved=\dimen276
+\tikz@lastmovetox=\dimen277
+\tikz@lastmovetoy=\dimen278
+\tikzleveldistance=\dimen279
+\tikzsiblingdistance=\dimen280
+\tikz@figbox=\box68
+\tikz@figbox@bg=\box69
+\tikz@tempbox=\box70
+\tikz@tempbox@bg=\box71
+\tikztreelevel=\count331
+\tikznumberofchildren=\count332
+\tikznumberofcurrentchild=\count333
+\tikz@fig@count=\count334
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+lematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count335
+\pgfmatrixcurrentcolumn=\count336
+\pgf@matrix@numberofcolumns=\count337
+)
+\tikz@expandcount=\count338
+
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
+
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
 ty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -193,20 +681,20 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 ty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count296
+\c@section@level=\count339
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count297
+\etb@tempcnta=\count340
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
 .sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen160
-\Hy@linkcounter=\count298
-\Hy@pagecounter=\count299
+\@linkdim=\dimen281
+\Hy@linkcounter=\count341
+\Hy@pagecounter=\count342
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -216,7 +704,7 @@ Now handling font encoding PD1 ...
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count300
+\Hy@SavedSpaceFactor=\count343
  (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -229,13 +717,13 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count301
+\c@Hy@tempcnt=\count344
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen161
+\XeTeXLinkMargin=\dimen282
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -245,9 +733,9 @@ lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count302
-\Field@Width=\dimen162
-\Fld@charsize=\dimen163
+\Fld@menulength=\count345
+\Field@Width=\dimen283
+\Fld@charsize=\dimen284
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -255,16 +743,16 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count303
-\c@Item=\count304
-\c@Hfootnote=\count305
+\Hy@abspage=\count346
+\c@Item=\count347
+\c@Hfootnote=\count348
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count306
-\c@bookmark@seq@number=\count307
+\Fld@listcount=\count349
+\c@bookmark@seq@number=\count350
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
 ilecheck.sty
@@ -277,480 +765,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip57
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count308
-\Gm@cntv=\count309
-\c@Gm@tempcnt=\count310
-\Gm@bindingoffset=\dimen164
-\Gm@wd@mp=\dimen165
-\Gm@odd@mp=\dimen166
-\Gm@even@mp=\dimen167
-\Gm@layoutwidth=\dimen168
-\Gm@layoutheight=\dimen169
-\Gm@layouthoffset=\dimen170
-\Gm@layoutvoffset=\dimen171
-\Gm@dimlist=\toks29
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
-)) (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count311
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2068.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2070.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2072.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2073.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2074.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2076.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2101.
-\U@D=\dimen172
-\l@unhyphenated=\language79
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count312
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4196.
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/ro\bab
-el-romanian.tex)
-Package babel Info: Importing font and identification data for romanian
-(babel)             from babel-ro.ini. Reported on input line 4320.
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/babel-romanian\romani
-an.ldf
-Language: romanian 2021/04/04 v1.2m Romanian support from the babel system
-))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.
-sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
- (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count313
-\float@exts=\toks30
-\float@box=\box55
-\@float@everytoks=\toks31
-\@floatcapt=\box56
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-\@float@every@algorithm=\toks32
-\c@algorithm=\count314
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseud
-ocode.sty
-Package: algpseudocode 
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorith
-micx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count315
-\c@ALG@rem=\count316
-\c@ALG@nested=\count317
-\ALG@tlm=\skip58
-\ALG@thistlm=\skip59
-\c@ALG@Lnr=\count318
-\c@ALG@blocknr=\count319
-\c@ALG@storecount=\count320
-\c@ALG@tmpcounter=\count321
-\ALG@tmplength=\skip60
-)
-Document Style - pseudocode environments for use with the `algorithmicx' style
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count322
-\lst@gtempboxa=\box57
-\lst@token=\toks33
-\lst@length=\count323
-\lst@currlwidth=\dimen173
-\lst@column=\count324
-\lst@pos=\count325
-\lst@lostspace=\dimen174
-\lst@width=\dimen175
-\lst@newlines=\count326
-\lst@lineno=\count327
-\lst@maxwidth=\dimen176
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count328
-\lst@skipnumbers=\count329
-\lst@framebox=\box58
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2025/11/14 1.11b listings configuration
-))
-Package: listings 2025/11/14 1.11b (Carsten Heinz)
-
-==> First Aid for listings.sty no longer applied!
-    Expected:
-        2024/09/23 1.10c (Carsten Heinz)
-    but found:
-        2025/11/14 1.11b (Carsten Heinz)
-    so I'm assuming it got fixed.
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
-Package: setspace 2022/12/04 v6.7b set line spacing
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
-z.sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.st
-y
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.
-sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
-il-common.tex
-\pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen177
-\pgfutil@tempdimb=\dimen178
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
-il-latex.def
-\pgfutil@abb=\box59
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrc
-s.code.tex
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.te
-x)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
-))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcor
-e.sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsy
-s.sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
-sys.code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
-ys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
-yslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks37
-))
-\pgf@x=\dimen179
-\pgf@y=\dimen180
-\pgf@xa=\dimen181
-\pgf@ya=\dimen182
-\pgf@xb=\dimen183
-\pgf@yb=\dimen184
-\pgf@xc=\dimen185
-\pgf@yc=\dimen186
-\pgf@xd=\dimen187
-\pgf@yd=\dimen188
-\w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count330
-\c@pgf@countb=\count331
-\c@pgf@countc=\count332
-\c@pgf@countd=\count333
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
-\pgf@sys@id@count=\count334
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
-.cfg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
-sys-pdftex.def
-File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
-sys-common-pdf.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
-syssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count335
-\pgfsyssoftpath@bigbuffer@items=\count336
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
-sysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
-g
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
-x)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-ore.code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
-de.tex
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathuti
-l.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpar
-ser.code.tex
-\pgfmath@dimen=\dimen189
-\pgfmath@count=\count337
-\pgfmath@box=\box60
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.basic.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.trigonometric.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.random.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.comparison.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.base.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.round.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.misc.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
-ctions.integerarithmetics.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcal
-c.code.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
-at.code.tex
-\c@pgfmathroundto@lastzeros=\count338
-))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.cod
-e.tex)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orepoints.code.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen190
-\pgf@picmaxx=\dimen191
-\pgf@picminy=\dimen192
-\pgf@picmaxy=\dimen193
-\pgf@pathminx=\dimen194
-\pgf@pathmaxx=\dimen195
-\pgf@pathminy=\dimen196
-\pgf@pathmaxy=\dimen197
-\pgf@xx=\dimen198
-\pgf@xy=\dimen199
-\pgf@yx=\dimen256
-\pgf@yy=\dimen257
-\pgf@zx=\dimen258
-\pgf@zy=\dimen259
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen260
-\pgf@path@lasty=\dimen261
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orepathusage.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen262
-\pgf@shorten@start@additional=\dimen263
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orescopes.code.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box61
-\pgf@hbox=\box62
-\pgf@layerbox@main=\box63
-\pgf@picture@serial@count=\count339
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen264
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oretransformations.code.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen265
-\pgf@pt@y=\dimen266
-\pgf@pt@temp=\dimen267
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orequick.code.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oreobjects.code.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orearrows.code.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen268
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oreshade.code.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen269
-\pgf@sys@shading@range@num=\count340
-\pgf@shadingcount=\count341
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oreimage.code.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oreexternal.code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box64
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orelayers.code.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-oretransparency.code.tex
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orepatterns.code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
-orerdf.code.tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
-leshapes.code.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box65
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
-leplot.code.tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
-comp-version-0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen270
-\pgf@nodesepend=\dimen271
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
-comp-version-1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.
-sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys
-.sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
-ys.code.tex))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
-de.tex))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffo
-r.code.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen272
-\pgffor@skip=\dimen273
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
-))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz\tikz.code.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
-braryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count342
-\pgfplotmarksize=\dimen274
-)
-\tikz@lastx=\dimen275
-\tikz@lasty=\dimen276
-\tikz@lastxsaved=\dimen277
-\tikz@lastysaved=\dimen278
-\tikz@lastmovetox=\dimen279
-\tikz@lastmovetoy=\dimen280
-\tikzleveldistance=\dimen281
-\tikzsiblingdistance=\dimen282
-\tikz@figbox=\box66
-\tikz@figbox@bg=\box67
-\tikz@tempbox=\box68
-\tikz@tempbox@bg=\box69
-\tikztreelevel=\count343
-\tikznumberofchildren=\count344
-\tikznumberofcurrentchild=\count345
-\tikz@fig@count=\count346
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
-lematrix.code.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count347
-\pgfmatrixcurrentcolumn=\count348
-\pgf@matrix@numberofcolumns=\count349
-)
-\tikz@expandcount=\count350
-
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\Hy@SectionHShift=\skip62
 )
 \c@thm=\count351
 \c@defn=\count352
@@ -764,39 +779,39 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (licenta.aux)
 \openout1 = `licenta.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count356
-\scratchdimen=\dimen283
-\scratchbox=\box70
+\scratchdimen=\dimen285
+\scratchbox=\box72
 \nofMPsegments=\count357
 \nofMParguments=\count358
-\everyMPshowfont=\toks46
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count359
-\MPscratchDim=\dimen284
+\MPscratchDim=\dimen286
 \MPnumerator=\count360
 \makeMPintoPDFobject=\count361
-\everyMPtoPDFconversion=\toks47
+\everyMPtoPDFconversion=\toks50
 )
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -808,12 +823,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 35.
- (licenta.out) (licenta.out)
-\@outlinefile=\write4
-\openout4 = `licenta.out'.
-
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -849,17 +858,23 @@ Package hyperref Info: Link coloring OFF on input line 35.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count362
-<imagini/FI.png, id=142, 578.8827pt x 290.0436pt>
+Package hyperref Info: Link coloring OFF on input line 44.
+(licenta.out) (licenta.out)
+\@outlinefile=\write4
+\openout4 = `licenta.out'.
+
+<imagini/FI.png, id=218, 578.8827pt x 290.0436pt>
 File: imagini/FI.png Graphic file (type png)
 <use imagini/FI.png>
-Package pdftex.def Info: imagini/FI.png  used on input line 41.
+Package pdftex.def Info: imagini/FI.png  used on input line 50.
 (pdftex.def)             Requested size: 100.0pt x 50.10338pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
 
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -868,87 +883,55 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/Catalin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./imagini/
-FI.png>] [2] [3] (licenta.toc [4
+FI.png>] [2] [3] [4] (licenta.toc [5
 
 ])
 \tf@toc=\write5
 \openout5 = `licenta.toc'.
 
- [5]
+ [6]
 Capitolul 1.
-<imagini/site_uvt.png, id=207, 1444.64719pt x 687.31781pt>
+[7
+
+] [8]
+<imagini/site_uvt.png, id=325, 1444.64719pt x 687.31781pt>
 File: imagini/site_uvt.png Graphic file (type png)
 <use imagini/site_uvt.png>
-Package pdftex.def Info: imagini/site_uvt.png  used on input line 126.
+Package pdftex.def Info: imagini/site_uvt.png  used on input line 165.
 (pdftex.def)             Requested size: 438.17226pt x 208.46225pt.
-[6
-
-] [7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.134 \chapter
-              {Fundamente teoretice privind chatboții și extensiile browser} 
-<./imagini/site_uvt.png>]
+ [9 <./imagini/site_uvt.png>]
 Capitolul 2.
-[8
-
-]
-Capitolul 3.
-[9
-
-]
-Capitolul 4.
-
-Overfull \hbox (36.67766pt too wide) in paragraph at lines 155--155
-[]\OT1/cmr/bx/n/17.28 Gestionarea in-te-rog^^Uarilor []i ge-ne-ra-rea r^^Uaspun
-surilor 
- []
-
 [10
 
-]
+] [11] [12] [13] [14]
+Capitolul 3.
+[15
+
+] [16] [17] [18]
+Capitolul 4.
+[19
+
+] [20] [21]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 382.
+ [22] [23] [24]
 Capitolul 5.
-[11
+[25
 
-]
+] [26] [27] [28] [29]
 Capitolul 6.
-[12
+[30
 
-]
+] [31] [32] [33]
 Capitolul 7.
-
-Overfull \hbox (6.62804pt too wide) in paragraph at lines 176--177
-[]\OT1/cmr/m/n/12 Decembrie: Do-cu-men-tare []i ana-liz^^Ua. Stu-di-e-rea con-c
-ep-te-lor de baz^^Ua pri-vind chatbo[]ii,
- []
-
-
-Overfull \hbox (9.23495pt too wide) in paragraph at lines 178--179
-[]\OT1/cmr/m/n/12 Ianuarie: Pro-iec-tare ar-hi-tec-tur^^Ua cha-tbot. De-fi-ni-r
-ea com-po-nen-te-lor: ex-ten-sie Chrome,
- []
-
-
-Overfull \hbox (7.33775pt too wide) in paragraph at lines 180--181
-[]\OT1/cmr/m/n/12 Februarie - Mar-tie: Im-ple-men-tare ex-ten-sie Chrome []i ba
--c-kend. Dezvol-ta-rea interfe[]ei
- []
-
-(licenta.bbl [13
+[34
 
 ]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-3.
+Capitolul 8.
+[35
 
-(C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
-)
-[14
+] (licenta.bbl) [36
+
 
 ] (licenta.aux)
  ***********
@@ -956,30 +939,41 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `licenta.out' has not changed.
-(rerunfilecheck)             Checksum: B2A686BF6CBE5066663A92C763118441;6906.
+(rerunfilecheck)             Checksum: F73652ACD14CB37C1A96E558A0ABABC2;9338.
  ) 
 Here is how much of TeX's memory you used:
- 24047 strings out of 467871
- 440000 string characters out of 5417408
- 842044 words of memory out of 5000000
- 52475 multiletter control sequences out of 15000+600000
- 642108 words of font info for 95 fonts, out of 8000000 for 9000
+ 24585 strings out of 467871
+ 447385 string characters out of 5417408
+ 849973 words of memory out of 5000000
+ 52938 multiletter control sequences out of 15000+600000
+ 651747 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,104p,1241b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbx6.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Catalin/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Catalin/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Catali
-n/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Use
-rs/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmti12.pfb>
-Output written on licenta.pdf (14 pages, 2142394 bytes).
+ 84i,16n,104p,632b,819s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
+ti1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecrm1000.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecrm1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Catalin\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Catalin\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Catalin\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\Ca
+talin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\
+Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.
+pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cbx1000.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx1728.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx2488.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecbx0700.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/Catalin/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Catalin/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Catal
+in/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Us
+ers/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb>
+Output written on licenta.pdf (36 pages, 2312254 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 295 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 964 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
+ 447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

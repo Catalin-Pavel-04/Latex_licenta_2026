@@ -1,33 +1,54 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{THK{\etalchar{+}}13}
+\begin{thebibliography}{VSP{\etalchar{+}}17}
 
-\bibitem[BEG{\etalchar{+}}]{Bersani}
-Marcello~M. Bersani, Madalina Erascu, Silvio Ghilardi, Francesco Marconi, and
-  Matteo Rossi.
-\newblock {Formal Verification of Data-Intensive Applications through Model
-  Checking Modulo Theories}.
+\bibitem[{Goo}]{ChromeMV3}
+{Google Chrome Developers}.
+\newblock Chrome extensions: Manifest v3 documentation.
+\newblock \url{https://developer.chrome.com/docs/extensions/}.
+\newblock Accesat: 26 mai 2026.
 
-\bibitem[Jac01]{Jac01}
-D~Jackson.
-\newblock {Lightweight Formal Methods}.
-\newblock In {\em {\{}FME{\}} 2001: Formal Methods for Increasing Software
-  Productivity, International Symposium of Formal Methods Europe, Berlin,
-  Germany, March 12-16, 2001, Proceedings}, 2001.
+\bibitem[LPP{\etalchar{+}}20]{Lewis2020RAG}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich Kuttler, Mike Lewis, Wen-tau Yih, Tim
+  Rocktaschel, Sebastian Riedel, and Douwe Kiela.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~33, pages 9459--9474, 2020.
 
-\bibitem[Neg]{NegotiationModuleSecurityReasoner}
-{Negotiation Module. Security Reasoner}.
+\bibitem[MRS08]{Manning2008IR}
+Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Schutze.
+\newblock {\em Introduction to Information Retrieval}.
+\newblock Cambridge University Press, 2008.
 
-\bibitem[NIS13]{NIST80054r4}
-{NIST SP-800-53: Recommended Security Controls for Federal Information
-  Systems}.
-\newblock Technical report, National Institute of Standards and Technology,
-  2013.
+\bibitem[{Oll}]{OllamaDocs}
+{Ollama}.
+\newblock Ollama documentation.
+\newblock \url{https://github.com/ollama/ollama/tree/main/docs}.
+\newblock Accesat: 26 mai 2026.
 
-\bibitem[THK{\etalchar{+}}13]{TakeshiTakahashi_IEEE_VT_Magazine_2013}
-Takeshi Takahashi, Jarmo Harju, Joona Kannisto, Bilhanan Silverajan, Jarmo
-  Harju, and Shin'ichiro Matsuo.
-\newblock {Tailored security: building nonrepudiable security service level
-  agreements}.
-\newblock {\em IEEE Vehicular Technology Magazine}, 8, jul 2013.
+\bibitem[{Pal}]{FlaskDocs}
+{Pallets Projects}.
+\newblock Flask documentation.
+\newblock \url{https://flask.palletsprojects.com/}.
+\newblock Accesat: 26 mai 2026.
+
+\bibitem[{Qdr}]{QdrantDocs}
+{Qdrant}.
+\newblock Qdrant documentation.
+\newblock \url{https://qdrant.tech/documentation/}.
+\newblock Accesat: 26 mai 2026.
+
+\bibitem[RZ09]{Robertson2009BM25}
+Stephen Robertson and Hugo Zaragoza.
+\newblock The probabilistic relevance framework: Bm25 and beyond.
+\newblock {\em Foundations and Trends in Information Retrieval}, 3(4):333--389,
+  2009.
+
+\bibitem[VSP{\etalchar{+}}17]{Vaswani2017Attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~30, 2017.
 
 \end{thebibliography}

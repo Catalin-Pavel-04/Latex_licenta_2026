@@ -1,15 +1,20 @@
 \documentclass[12pt,a4paper]{report}
-\usepackage{amsmath,amsthm,amssymb,graphicx,hyperref}
-\usepackage[left=1.2in,right=1in,top=1in,bottom=1in]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[romanian]{babel}
+\usepackage{amsmath,amsthm,amssymb,graphicx}
+\usepackage[left=1.2in,right=1in,top=1in,bottom=1in]{geometry}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{listings}
 \usepackage{setspace}
-
 \usepackage{float}
+\usepackage{array}
 \usepackage{tikz}
 \usetikzlibrary{positioning,calc}
+\usepackage{hyperref}
+\setlength{\emergencystretch}{3em}
 
 \newtheorem{thm}{Teorema}[section]
 \newtheorem{lem}[thm]{Lema}
@@ -28,167 +33,573 @@
 \def\tablename{Tabelul}
 \def\partname{Partea}
 \def\chaptername{Capitolul}
-\def\refname{Referin'te}
-\def\bibname{Bibliografie} 
+\def\refname{Referințe}
+\def\bibname{Bibliografie}
 \def\appendixname{Anexa}
 
+\newcommand{\thesistitle}{UVT Asist: asistent inteligent pentru accesul la informațiile oficiale ale UVT}
+\newcommand{\studentname}{Pavel Cătălin}
+\newcommand{\coordinatorname}{Asist. Drd. Theodor Radu Grumeza}
+
 \begin{document}
+\onehalfspacing
+
 \thispagestyle{empty}
 \begin{center}
-\begin{figure}[h!]
 \vspace{-20pt}
-\begin{center}
 \includegraphics[width=100pt]{imagini/FI.png}
-\end{center}
-\end{figure}
-
 
 {\large{\bf UNIVERSITATEA DE VEST DIN TIMIȘOARA
 
 FACULTATEA DE INFORMATICĂ
 
-PROGRAMUL DE STUDII DE LICENȚĂ: Informatică }}
+PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
+
+\vspace{90pt}
+{\huge {\bf LUCRARE DE LICENȚĂ}}
+
+\vspace{25pt}
+{\Large{\bf \thesistitle}}
 
 \vspace{120pt}
-{\huge {\bf LUCRARE DE LICEN\c T\u A}}
-
-\vspace{150pt}
 \end{center}
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Asist. Drd. Theodor Radu Grumeza \hfill Pavel C\u at\u alin}
+\noindent \coordinatorname \hfill \studentname}
 
 \vfill
 \begin{center}
-{\bf TIMI\c SOARA
+{\bf TIMIȘOARA
 
 2026}
 \end{center}
 \newpage
+
 \thispagestyle{empty}
 \begin{center}
-{\large{\bf UNIVERSITATEA DE VEST DIN TIMI\c SOARA
+{\large{\bf UNIVERSITATEA DE VEST DIN TIMIȘOARA
 
-FACULTATEA DE INFORMATIC\u A
+FACULTATEA DE INFORMATICĂ
 
+PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
 
-PROGRAMUL DE STUDII DE LICEN\c T\u A: Informatic\u a }}
+\vspace{90pt}
+{\huge {\bf LUCRARE DE LICENȚĂ}}
+
+\vspace{25pt}
+{\Large{\bf \thesistitle}}
 
 \vspace{120pt}
-{\huge {\bf LUCRARE DE LICEN\c T\u A}}
-
-\vspace{150pt}
 \end{center}
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
 
-\noindent Asist. Drd. Theodor Radu Grumeza \hfill Pavel C\u at\u alin}
+\noindent \coordinatorname \hfill \studentname}
 
 \vfill
 \begin{center}
-{\bf TIMI\c SOARA
+{\bf TIMIȘOARA
 
 2026}
 \end{center}
 \newpage
-\normalsize{}
-
 
 \section*{Abstract}
+This bachelor thesis presents the design and implementation of \textbf{UVT Asist}, a local retrieval-augmented assistant dedicated to students of the West University of Timișoara. The application is delivered as a Chrome extension popup and is supported by a Flask backend that indexes official university and faculty pages, retrieves relevant evidence, and generates concise answers grounded in official sources.
 
-Această lucrare de licență prezintă proiectarea și implementarea unui chatbot inteligent destinat studenților Universității de Vest din Timișoara, având ca scop facilitarea accesului rapid la informații academice și administrative. Soluția propusă este implementată sub forma unei extensii Google Chrome, integrată direct în procesul de navigare pe site-ul universității și pe paginile facultăților, permițând utilizatorilor să adreseze întrebări în limbaj natural și să primească răspunsuri relevante în timp real. Sistemul se bazează pe un model conversațional de inteligență artificială și pe tehnici de procesare a limbajului natural, fiind susținut de un backend care gestionează logica aplicației și interogarea informațiilor. Lucrarea abordează atât fundamentele teoretice necesare dezvoltării unui chatbot, cât și aspectele practice legate de arhitectură, implementare și integrare. În final, sunt prezentate rezultatele obținute în urma testării soluției, alături de o analiză a limitărilor și de direcții posibile de dezvoltare viitoare.
+The proposed system follows a local-index-first RAG architecture. UVT pages are crawled, cleaned, split into chunks, embedded locally with Ollama, stored in Qdrant, and searched using semantic retrieval combined with deterministic reranking. The assistant uses metadata filters such as faculty and page type, detects common student intents, corrects frequent Romanian query typos, and exposes official source links for every answer. When evidence is weak, the system avoids unsupported claims and communicates the limitation explicitly.
 
-\onehalfspacing
-
-
-
+The thesis discusses the theoretical basis of conversational assistants, information retrieval, vector search, large language models and retrieval-augmented generation. It then maps these concepts to the implemented prototype, emphasizing transparency, local execution, source verification, and practical usability for students searching for schedules, admissions information, scholarships, regulations, contacts or other administrative resources.
 
 \newpage
+\section*{Rezumat}
+Lucrarea prezintă proiectarea și implementarea aplicației \textbf{UVT Asist}, un asistent inteligent local, orientat către studenții Universității de Vest din Timișoara. Scopul sistemului este reducerea timpului necesar pentru găsirea informațiilor oficiale publicate pe site-ul universității și pe site-urile facultăților. Produsul final este o extensie Google Chrome, iar procesarea întrebărilor este realizată de un backend Flask care construiește contextul relevant și returnează răspunsuri scurte, însoțite de surse oficiale.
 
+Soluția folosește o arhitectură de tip Retrieval-Augmented Generation. Paginile oficiale sunt descoperite, descărcate, curățate, împărțite în fragmente, transformate în reprezentări vectoriale cu Ollama și stocate în Qdrant. La interogare, sistemul combină căutarea semantică, filtrele pe facultate și tip de pagină, reranking-ul determinist și generarea locală a răspunsului. Pentru întrebările de navigare sau pentru cazurile cu dovezi insuficiente, backend-ul poate evita modelul generativ și poate folosi răspunsuri deterministe sau mesaje explicite de incertitudine.
+
+Lucrarea tratează fundamentele teoretice ale asistenților conversaționali, ale sistemelor de regăsire a informației, ale modelelor de limbaj și ale căutării vectoriale, apoi le conectează cu deciziile tehnice din proiectul UVT Asist. Accentul este pus pe utilizarea surselor oficiale, pe transparența răspunsurilor, pe rularea locală a componentelor AI și pe limitarea riscului de generare a unor informații neverificate.
+
+\newpage
 \tableofcontents
 \newpage
 
-% cap1
 \chapter{Introducere}
+
 \section{Contextul lucrării}
+Digitalizarea serviciilor universitare a schimbat modul în care studenții interacționează cu instituția. Informații precum orare, calendare administrative, regulamente, metodologii de burse, proceduri de admitere, contacte, formulare sau anunțuri sunt publicate în mod curent pe site-uri web. Această disponibilitate nu înseamnă însă automat acces rapid. Studentul trebuie să știe unde să caute, să identifice pagina corectă, să interpreteze termenii folosiți de instituție și să distingă între o pagină generală, o știre veche și o metodologie încă relevantă.
 
-The bachelor's thesis has the objective of developing an intelligent chatbot intended for the students of the West University of Timișoara (UVT), designed to facilitate navigation on the university’s main website and on the websites of the faculties. The chatbot is initially implemented as a Google Chrome extension, so that users can quickly access the assistant while browsing the university’s online resources.
+În cazul Universității de Vest din Timișoara, informația este distribuită între site-ul central al universității, site-ul de admitere și site-urile facultăților. Fiecare site are propriile meniuri, propriile convenții de denumire și propriul ritm de actualizare. O întrebare aparent simplă, de exemplu „Unde găsesc orarul?” sau „Se pot cumula bursele?”, poate necesita parcurgerea mai multor pagini înainte de obținerea unei surse oficiale potrivite. Problema nu este lipsa informației, ci costul de acces la informația corectă.
 
-The motivation of the thesis comes from the fact that most students encounter difficulties in finding academic and administrative information: schedules, course recommendations, university policies, official forms, information about scholarships, admission, mobility programs, secretariat contacts, etc. The faculty websites are diverse in structure and organization, which makes it harder to quickly access the necessary information. A chatbot integrated directly into the browser can significantly reduce search time and can improve the communication between the institution and the students.
+Lucrarea pornește de la această observație și propune un asistent integrat în browser, capabil să răspundă la întrebări formulate natural și să indice sursele oficiale folosite. Integrarea sub forma unei extensii Chrome este importantă deoarece păstrează asistentul în același context în care apare nevoia de informare. Studentul nu este obligat să deschidă o aplicație separată, ci poate interoga sistemul direct din browser.
 
-The idea of implementation includes: designing a conversational AI model capable of responding in natural language, implementing a Chrome extension that intercepts the users’ questions, developing a backend (API) that manages the bot’s logic and the information retrieval, direct integration with UVT pages for generating precise answers, the possibility of extending the project to a web platform and a mobile application.
+\section{Motivație}
+Asistenții conversaționali bazați pe modele de limbaj au devenit o soluție atractivă pentru interacțiunea în limbaj natural. Totuși, într-un context instituțional, un răspuns fluent nu este suficient. Studentul are nevoie de informații verificabile, iar sistemul trebuie să evite răspunsurile speculative. În domenii precum bursele, admiterea, regulamentele sau procedurile administrative, o formulare aproximativă poate produce confuzie.
 
-The project aims to offer a modern, efficient, and accessible solution that simplifies the interaction of students with the university’s digital infrastructure and reduces the volume of questions directed to secretariats and administrative staff.
+Din acest motiv, UVT Asist nu tratează modelul de limbaj ca sursă unică de adevăr. Modelul este folosit ca instrument de formulare, iar informația factuală este extrasă din pagini oficiale. Abordarea este apropiată de paradigma Retrieval-Augmented Generation, în care generarea răspunsului este condiționată de context recuperat dintr-o colecție de documente \cite{Lewis2020RAG}. Această decizie permite păstrarea avantajelor interfeței conversaționale, dar reduce dependența de cunoștințele interne ale modelului.
+
+\section{Scopul și obiectivele lucrării}
+Scopul lucrării este proiectarea și realizarea unui prototip funcțional pentru un asistent digital care facilitează accesul la informațiile oficiale UVT. Prototipul urmărește să fie util în situații frecvente pentru studenți: găsirea orarului, identificarea datelor de contact, orientarea către informații despre admitere, consultarea paginilor despre burse, regulamente sau alte resurse administrative.
+
+Obiectivele principale sunt:
+\begin{itemize}
+    \item proiectarea unei arhitecturi locale, în care extensia Chrome reprezintă interfața principală, iar backend-ul Flask orchestrează căutarea și generarea răspunsului;
+    \item construirea unui index local din pagini oficiale UVT și din paginile facultăților;
+    \item utilizarea embeddings-urilor și a unei baze vectoriale pentru regăsire semantică;
+    \item filtrarea rezultatelor în funcție de facultate și de tipul paginii;
+    \item combinarea scorurilor semantice cu reguli deterministe de reranking pentru a prioritiza sursele potrivite;
+    \item generarea unor răspunsuri concise, în limba română, însoțite de sursele oficiale folosite;
+    \item tratarea explicită a cazurilor cu încredere scăzută, fără a inventa informații nesusținute de surse.
+\end{itemize}
+
+\section{Contribuții}
+Contribuția principală a lucrării constă în proiectarea unei soluții aplicate, adaptate ecosistemului UVT, care combină o interfață ușor de folosit cu un mecanism local de retrieval și generare. Față de o simplă căutare pe site, sistemul acceptă întrebări naturale, corectează unele formulări imperfecte și prioritizează sursele relevante. Față de un chatbot generic, sistemul păstrează legătura cu sursele oficiale și comunică nivelul de încredere al răspunsului.
+
+La nivel tehnic, proiectul propune un pipeline complet: descoperirea paginilor, extragerea textului, clasificarea paginilor, segmentarea în fragmente, construirea reprezentărilor vectoriale, stocarea în Qdrant, căutarea semantică, reranking-ul determinist, verificarea live limitată și generarea locală cu Ollama. La nivel de interacțiune, extensia oferă selecția facultății, istoricul conversației, întrebări recente, afișarea surselor și stări clare pentru backend indisponibil sau indexare în desfășurare.
+
+\section{Structura lucrării}
+Capitolul al doilea prezintă fundamentele teoretice relevante: regăsirea informației, modelele de limbaj, embeddings-urile, căutarea vectorială și paradigma Retrieval-Augmented Generation. Capitolul al treilea analizează problema concretă din ecosistemul UVT și formulează cerințele sistemului. Capitolul al patrulea descrie arhitectura aplicației, iar capitolul al cincilea detaliază componentele implementate. Capitolul al șaselea discută validarea, limitele și riscurile soluției. Ultimele capitole prezintă concluziile și activitatea desfășurată.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15.4cm]{imagini/site_uvt.png}
+    \caption{Exemplu de context web în care utilizatorul poate avea nevoie de asistență pentru navigare}
+\end{figure}
+
+\chapter{Fundamente teoretice}
+
+\section{Regăsirea informației}
+Regăsirea informației este domeniul care studiază identificarea documentelor relevante pentru o nevoie de informare exprimată printr-o interogare. În sistemele clasice, documentele sunt indexate prin termeni, iar potrivirea se face prin măsuri lexicale. Modelele de tip TF-IDF sau BM25 valorifică frecvența termenilor și raritatea lor în colecție pentru a estima relevanța \cite{Manning2008IR,Robertson2009BM25}.
+
+Aceste metode au avantaje importante: sunt eficiente, interpretabile și nu necesită infrastructură complexă. Totuși, ele depind mult de suprapunerea exactă dintre termenii întrebării și termenii documentului. Într-un sistem destinat studenților, această dependență poate fi problematică. Utilizatorii pot întreba „unde găsesc programul?” în loc de „orar”, pot scrie cu greșeli sau pot folosi forme flexionare diferite. De aceea, un sistem robust trebuie să includă normalizare, corecție de termeni și semnale suplimentare din titlu, URL și tipul paginii.
+
+În UVT Asist, căutarea lexicală nu este eliminată. Ea rămâne importantă pentru reranking și fallback, deoarece oferă semnale precise pentru întrebări de navigare. De exemplu, apariția cuvântului „orare” în URL-ul unei pagini oficiale este un indiciu foarte puternic. În schimb, pentru întrebări mai libere, precum cele despre cumularea burselor, căutarea semantică ajută la identificarea documentelor relevante chiar dacă formularea exactă diferă.
+
+\section{Modele de limbaj și limitele lor}
+Modelele de limbaj moderne sunt construite pentru a prezice și genera text. Arhitectura Transformer a devenit baza multor modele actuale deoarece mecanismul de atenție permite modelarea eficientă a relațiilor dintre cuvinte pe distanțe mari \cite{Vaswani2017Attention}. Aceste modele pot produce răspunsuri fluente și pot înțelege într-o anumită măsură intenția utilizatorului, ceea ce le face utile pentru interfețe conversaționale.
+
+În același timp, un model de limbaj nu garantează corectitudinea factuală a răspunsului. Dacă este întrebat despre o regulă administrativă și nu primește context oficial, modelul poate genera un răspuns plauzibil, dar greșit sau depășit. Această problemă este cunoscută în practică drept halucinație. Într-o aplicație universitară, riscul este semnificativ deoarece utilizatorul poate lua decizii pe baza răspunsului.
+
+Pentru UVT Asist, concluzia teoretică este clară: modelul generativ trebuie constrâns de surse. Rolul lui nu este să decidă ce pagină este oficială și nici să inventeze reguli, ci să formuleze un răspuns scurt pe baza fragmentelor selectate de backend. De aceea, selecția surselor este realizată determinist de componentele de retrieval și reranking, nu de modelul de limbaj.
+
+\section{Embeddings și căutare vectorială}
+Embeddings-urile sunt reprezentări numerice dense ale textului. Ideea de bază este că texte cu sens apropiat sunt mapate în zone apropiate ale unui spațiu vectorial. O întrebare și un fragment de document pot fi comparate prin similaritate cosinus:
+\[
+\operatorname{sim}(q,d)=\frac{q \cdot d}{\|q\|\|d\|},
+\]
+unde \(q\) este vectorul întrebării, iar \(d\) este vectorul fragmentului de document.
+
+Căutarea vectorială este utilă deoarece poate recupera documente relevante chiar și atunci când termenii nu coincid exact. Într-o colecție universitară, aceeași nevoie poate fi exprimată diferit: „taxe”, „achitare”, „plată”, „secretariat”, „program cu publicul” sau „contact”. Embeddings-urile pot aproxima aceste relații semantice mai bine decât o simplă potrivire textuală.
+
+Pentru stocarea și căutarea embeddings-urilor, proiectul folosește Qdrant, o bază de date vectorială care permite căutare după similaritate și filtrare pe metadate \cite{QdrantDocs}. Filtrarea este esențială în acest proiect: aceeași întrebare poate avea răspunsuri diferite pentru Facultatea de Informatică și pentru nivelul general UVT. Prin urmare, fiecare fragment indexat conține metadate precum \texttt{faculty\_id}, \texttt{page\_type}, \texttt{title}, \texttt{url} și \texttt{last\_indexed}.
+
+\section{Retrieval-Augmented Generation}
+Retrieval-Augmented Generation combină două etape: recuperarea documentelor relevante și generarea răspunsului pe baza acestora \cite{Lewis2020RAG}. În loc ca modelul să răspundă doar din parametrii săi interni, sistemul îi oferă un context explicit. Această abordare este potrivită pentru domenii în care informația se schimbă sau trebuie justificată prin surse.
+
+Un flux RAG tipic conține următorii pași:
+\begin{enumerate}
+    \item documentele sunt colectate și segmentate în fragmente;
+    \item fragmentele sunt transformate în embeddings și indexate;
+    \item întrebarea utilizatorului este normalizată și transformată la rândul ei într-un embedding;
+    \item sistemul recuperează fragmentele relevante;
+    \item fragmentele sunt ordonate și filtrate;
+    \item modelul de limbaj primește întrebarea și contextul oficial;
+    \item răspunsul este returnat împreună cu sursele folosite.
+\end{enumerate}
+
+Această schemă nu elimină complet riscurile. Dacă etapa de retrieval selectează surse slabe, modelul poate formula un răspuns slab. Dacă documentele indexate sunt depășite, răspunsul poate fi depășit. De aceea, UVT Asist adaugă mecanisme suplimentare: clasificarea tipului de întrebare, reranking determinist, scor de încredere, fallback lexical, răspunsuri deterministe pentru întrebări de navigare și verificare live limitată a surselor de top.
+
+\section{Extensii de browser ca interfață}
+O extensie de browser este potrivită pentru aplicații care trebuie să fie disponibile rapid în timpul navigării. Chrome Manifest V3 definește structura extensiilor moderne, inclusiv fișierul manifest, popup-ul, permisiunile și accesul la API-uri de browser \cite{ChromeMV3}. În cazul UVT Asist, extensia nu modifică paginile UVT și nu injectează logică în site-uri. Ea oferă un popup separat care comunică local cu backend-ul Flask.
+
+Această alegere are două avantaje. Primul este ergonomia: utilizatorul poate pune întrebări fără a părăsi browserul. Al doilea este separarea responsabilităților: extensia rămâne responsabilă pentru interfață, iar backend-ul pentru retrieval, generare, cache și feedback. Comunicarea se face cu un server local, disponibil pe \texttt{127.0.0.1:5000}.
+
+\section{Rulare locală și confidențialitate}
+O decizie importantă a proiectului este folosirea componentelor AI locale. Ollama este utilizat atât pentru generarea răspunsurilor, cât și pentru embeddings \cite{OllamaDocs}. Această abordare reduce dependența de servicii externe și permite demonstrarea aplicației într-un mediu controlat. În plus, întrebările utilizatorului și fragmentele recuperate nu trebuie trimise către un API remote.
+
+Rularea locală implică însă costuri. Performanța depinde de hardware, modelele trebuie instalate pe mașina locală, iar Qdrant și Flask trebuie pornite înainte de utilizarea extensiei. De aceea, aplicația include endpoint-uri de stare și mesaje de interfață pentru backend indisponibil, indexare în desfășurare, Ollama indisponibil sau Qdrant indisponibil.
+
+\section{Calitatea surselor și prospețimea informației}
+Într-un sistem conversațional obișnuit, calitatea răspunsului este evaluată în primul rând prin coerență și utilitate. Într-un sistem instituțional, aceste criterii nu sunt suficiente. Răspunsul trebuie să fie susținut de o sursă oficială, iar sursa trebuie să fie suficient de recentă pentru întrebarea adresată. De exemplu, o pagină veche despre admiterea dintr-un an anterior poate conține termeni foarte apropiați de întrebarea utilizatorului, dar nu trebuie preferată în fața unei pagini stabile despre procesul curent de admitere.
+
+Această problemă este una de selecție a dovezilor. Un model de limbaj poate formula un răspuns fluent dintr-un fragment nepotrivit, ceea ce face ca etapa de retrieval să fie critică. În UVT Asist, paginile oficiale sunt tratate diferit în funcție de tip. Paginile de navigare, precum cele de orar sau contact, sunt de regulă mai stabile. Documentele de metodologie și regulament au autoritate mai mare pentru întrebări normative. Știrile și anunțurile datate pot fi utile, dar trebuie penalizate atunci când întrebarea cere o resursă generală.
+
+Prospețimea informației este abordată prin două mecanisme complementare. Primul este reconstrucția indexului, care actualizează snapshot-ul local al paginilor oficiale. Al doilea este verificarea live limitată, care poate reextrage conținutul pentru sursele de top înainte de formularea răspunsului. Verificarea live nu înlocuiește indexul local, deoarece o căutare live largă ar fi mai lentă și mai greu de controlat. Ea funcționează ca un pas de confirmare pentru un număr mic de pagini deja selectate.
+
+\section{Degradare controlată}
+O aplicație bazată pe mai multe componente locale trebuie să accepte faptul că unele servicii pot lipsi temporar. Ollama poate să nu fie pornit, modelul de embedding poate să nu fie instalat, Qdrant poate să nu aibă colecția construită, iar indexarea poate fi în desfășurare. Într-o astfel de situație, un sistem robust nu trebuie să eșueze necontrolat și nici să afișeze utilizatorului un răspuns aparent normal construit din date insuficiente.
+
+UVT Asist aplică principiul degradării controlate. Dacă Qdrant sau embeddings-urile nu sunt disponibile, backend-ul poate folosi fallback lexical pe indexul JSON. Dacă dovezile sunt prea slabe, generarea cu modelul de limbaj este evitată. Dacă indexarea de startup rulează, endpoint-ul de chat returnează un mesaj explicit cu progresul indexării. Dacă backend-ul nu răspunde, extensia afișează starea de indisponibilitate în loc să lase utilizatorul fără explicație.
+
+Această abordare este importantă din două motive. În primul rând, crește predictibilitatea aplicației în timpul demonstrației și dezvoltării. În al doilea rând, respectă natura domeniului: pentru informații administrative, este mai acceptabil să spui „nu am suficiente dovezi oficiale” decât să produci un răspuns nesusținut.
+
+\chapter{Analiza problemei și cerințe}
+
+\section{Particularitățile ecosistemului UVT}
+Ecosistemul web al UVT este format din mai multe surse oficiale: site-ul central, site-ul de admitere și site-urile facultăților. Din perspectiva unui sistem automat, această structură produce trei dificultăți. Prima este dispersia informației: unele răspunsuri sunt la nivelul universității, altele la nivelul facultății. A doua este eterogenitatea: paginile pot fi HTML, PDF, DOCX, text sau imagini care necesită OCR. A treia este dinamica informației: anumite pagini se schimbă periodic, în special cele legate de admitere, orare, burse sau calendare.
+
+Un student nu formulează întrebări în termenii interni ai site-ului. El poate întreba „care e programul secretariatului?”, „unde văd orarul la info?”, „pot primi două burse?” sau „unde mă înscriu la admitere?”. Sistemul trebuie să transforme aceste formulări într-o căutare controlată, să aleagă domeniul potrivit și să returneze sursa oficială relevantă.
+
+\section{Cerințe funcționale}
+Cerințele funcționale urmărite în proiect sunt:
+\begin{itemize}
+    \item utilizatorul poate selecta facultatea relevantă sau poate lucra în contextul general UVT;
+    \item utilizatorul poate trimite întrebări în limbaj natural din popup-ul extensiei;
+    \item backend-ul detectează intenții pentru orar, contact, burse, admitere, regulamente, informații pentru studenți sau întrebări generale;
+    \item sistemul recuperează fragmente relevante din indexul local și le ordonează după scor;
+    \item răspunsul include surse oficiale distincte, afișate clar în interfață;
+    \item pentru întrebări ambigue, sistemul poate cere alegerea unei facultăți;
+    \item aplicația expune starea componentelor prin endpoint-uri de health și status;
+    \item utilizatorul poate oferi feedback asupra răspunsului primit.
+\end{itemize}
+
+\section{Cerințe nefuncționale}
+Pe lângă funcționalități, proiectul impune cerințe nefuncționale importante. Sistemul trebuie să favorizeze sursele oficiale, să evite afirmațiile nesusținute, să funcționeze local, să degradeze controlat atunci când Qdrant sau Ollama nu sunt disponibile și să rămână utilizabil chiar dacă indexarea este în curs.
+
+O altă cerință este transparența. Utilizatorul trebuie să vadă sursele, iar backend-ul trebuie să atașeze metadate despre încredere, modul de retrieval, verificarea live și modul de generare. Această transparență este esențială într-un sistem educațional, deoarece răspunsurile nu trebuie tratate ca autoritate finală fără posibilitatea de verificare.
+
+\section{Categorii de întrebări}
+Analiza proiectului arată că întrebările studenților pot fi împărțite în mai multe categorii:
+\begin{itemize}
+    \item întrebări de navigare, unde răspunsul este de obicei un link oficial, de exemplu pagina de orare sau pagina de contact;
+    \item întrebări administrative, unde este necesară sinteza scurtă a unei pagini sau metodologii;
+    \item întrebări de regulament, unde sursa trebuie să fie o metodologie sau un document instituțional;
+    \item întrebări dependente de facultate, unde aceeași formulare poate conduce la pagini diferite;
+    \item întrebări vagi sau incomplete, unde sistemul trebuie să evite alegerea arbitrară a unei surse.
+\end{itemize}
+
+Această clasificare influențează arhitectura. Pentru întrebările de navigare, răspunsurile deterministe sunt mai sigure și mai rapide decât generarea cu LLM. Pentru întrebările administrative, modelul poate fi util dacă există dovezi suficiente. Pentru întrebările de regulament, reranking-ul trebuie să favorizeze documentele de tip metodologie, procedură sau regulament.
+
+\section{Cazuri de utilizare reprezentative}
+Un caz de utilizare frecvent este căutarea orarului. Studentul nu are nevoie de o explicație lungă despre organizarea cursurilor, ci de pagina oficială pe care poate consulta orarul. În acest caz, sistemul trebuie să identifice facultatea, să favorizeze URL-ul specific și să returneze un răspuns scurt. Pentru Facultatea de Informatică, pagina de orare are un semnal puternic atât în URL, cât și în titlu, ceea ce justifică un răspuns determinist.
+
+Un al doilea caz de utilizare este identificarea secretariatului sau a datelor de contact. Întrebările din această categorie pot include termeni precum „program”, „telefon”, „email”, „secretariat” sau „contact”. Răspunsul poate depinde de facultatea selectată, iar alegerea unei pagini generale UVT poate fi insuficientă. De aceea, sistemul tratează contactul ca intenție dependentă de facultate și poate cere clarificare dacă utilizatorul lucrează în contextul general.
+
+Un caz mai dificil este întrebarea de tip regulament, de exemplu „Se pot cumula bursele?”. Aici nu este suficientă o pagină informativă generică despre burse. Sistemul trebuie să favorizeze metodologii, regulamente sau documente instituționale, deoarece răspunsul depinde de formulări oficiale. În plus, răspunsul trebuie să fie prudent: dacă fragmentul recuperat nu conține regula relevantă, aplicația trebuie să indice surse apropiate, nu să deducă o regulă.
+
+Un alt caz important este admiterea. Site-urile de admitere conțin adesea știri anuale, comunicate și pagini stabile despre proces. Pentru întrebarea „Unde găsesc informații despre admitere?”, o pagină stabilă despre procesul de preînscriere este mai potrivită decât o știre veche. Acest caz a influențat direct reranking-ul, prin penalizarea știrilor datate atunci când întrebarea nu menționează explicit un an.
+
+\section{Riscuri informaționale}
+Riscul principal într-un asistent instituțional este producerea unei concluzii nejustificate. Un răspuns incorect despre burse, admitere sau proceduri poate avea consecințe mai mari decât o simplă recomandare greșită. Din acest motiv, sistemul trebuie să trateze informația administrativă ca informație cu sensibilitate ridicată. În proiect, această decizie se reflectă în reguli de prompt, în scorul de încredere și în alegerea de a nu apela modelul generativ atunci când nu există dovezi.
+
+Un al doilea risc este alegerea unei surse oficiale, dar nepotrivite. O pagină a unei facultăți poate fi oficială, însă nu răspunde întrebării generale. O metodologie veche poate fi oficială, dar nu neapărat actuală. O știre despre admitere poate fi oficială, dar depășită. De aceea, proiectul nu folosește doar criteriul „domeniu oficial”, ci combină domeniul cu tipul paginii, titlul, URL-ul, conținutul și intenția detectată.
+
+Un al treilea risc este formularea ambiguă a întrebărilor. Dacă utilizatorul întreabă doar „program” sau „detalii”, sistemul nu poate ști dacă se referă la orar, program cu publicul sau un program de studii. În astfel de situații, clarificarea este preferabilă unei alegeri arbitrare. Această idee este importantă pentru experiența utilizatorului: un asistent bun nu trebuie să pară sigur atunci când întrebarea nu oferă suficient context.
+
+\section{Criterii de acceptare}
+Pentru ca prototipul să fie considerat funcțional, au fost stabilite câteva criterii de acceptare. Sistemul trebuie să pornească local, să expună starea componentelor, să încarce lista de facultăți și să răspundă la întrebări reprezentative. Pentru întrebările de orar și contact, sursa de top trebuie să fie pagina specifică facultății. Pentru întrebările de burse și regulamente, rezultatele trebuie să favorizeze documente sau pagini instituționale cu autoritate.
+
+În plus, aplicația trebuie să ofere răspunsuri transparente. Fiecare răspuns trebuie să includă surse oficiale atunci când există dovezi, iar nivelul de încredere trebuie să fie vizibil. În cazul lipsei de dovezi, sistemul trebuie să returneze un mesaj de limitare. Pentru demonstrație, trebuie să fie prezentabile și stările de eșec: backend indisponibil, indexare în curs, Ollama indisponibil, Qdrant indisponibil și retrieval slab.
+
+\chapter{Arhitectura sistemului UVT Asist}
+
+\section{Viziune generală}
+UVT Asist este construit ca sistem local, compus dintr-o extensie Chrome, un backend Flask, un index JSON, o bază vectorială Qdrant și modele Ollama pentru embeddings și generare. Produsul vizibil pentru utilizator este extensia, iar restul componentelor rulează local și susțin procesarea întrebării.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=15.4 cm]{imagini/site_uvt.png}
-\caption{Site-ul Facultății}
+\begin{tikzpicture}[
+    node distance=1.6cm,
+    component/.style={draw, rounded corners, align=center, minimum width=3.4cm, minimum height=1cm},
+    data/.style={draw, rounded corners, align=center, minimum width=3.2cm, minimum height=0.9cm, fill=gray!10},
+    arrow/.style={->, thick}
+]
+\node[component] (extension) {Extensie Chrome\\popup utilizator};
+\node[component, right=of extension] (backend) {Backend Flask\\orchestrare chat};
+\node[data, above right=of backend] (json) {Index JSON\\fragmente oficiale};
+\node[data, right=of backend] (qdrant) {Qdrant\\căutare vectorială};
+\node[component, below right=of backend] (ollama) {Ollama\\embeddings + generare};
+\node[data, above=of json] (sources) {Site-uri oficiale\\UVT și facultăți};
+
+\draw[arrow] (extension) -- node[above]{\small întrebare} (backend);
+\draw[arrow] (backend) -- node[left]{\small indexare} (json);
+\draw[arrow] (backend) -- node[above]{\small search} (qdrant);
+\draw[arrow] (backend) -- node[right]{\small prompt} (ollama);
+\draw[arrow] (sources) -- (json);
+\draw[arrow] (json) -- (qdrant);
+\draw[arrow] (backend) -- node[below]{\small răspuns + surse} (extension);
+\end{tikzpicture}
+\caption{Arhitectura logică a sistemului UVT Asist}
 \end{figure}
 
-\section{Scopul și obiectivele proiectului}
-\section{Structura lucrării}
+Separarea componentelor reduce complexitatea interfeței și permite dezvoltarea independentă a fiecărui nivel. Extensia nu trebuie să cunoască detaliile indexului sau ale modelului de limbaj. Backend-ul nu depinde de browser pentru logica de retrieval. Qdrant poate fi înlocuit sau reconstruit fără modificarea popup-ului, iar modelul Ollama poate fi schimbat prin configurare.
 
-% cap2
-\chapter{Fundamente teoretice privind chatboții și extensiile browser}
-\section{Noțiuni generale despre chatboți}
-\section{Modele AI conversaționale și NLP}
-\section{Arhitectura extensiilor Google Chrome}
-\section{Sisteme de căutare și mapare a informațiilor}
-\section{Tehnologii utilizate}
+\section{Principii de proiectare}
+Arhitectura a fost ghidată de câteva principii. Primul principiu este separarea clară între interfață și procesarea informației. Extensia Chrome trebuie să rămână simplă, predictibilă și ușor de folosit. Ea nu trebuie să implementeze logica de căutare, normalizare, scorare sau generare. Aceste responsabilități aparțin backend-ului, unde pot fi testate și modificate mai ușor.
 
-% cap3
-\chapter{Proiectarea și arhitectura sistemului}
-\section{Descriere generală a sistemului}
-\section{Diagrama arhitecturală}
-\section{Specificații pentru extensia Chrome}
-\section{Proiectarea backend-ului și a API-ului}
-\section{Modelul NLP și integrarea acestuia}
-\section{Scenarii de utilizare}
+Al doilea principiu este controlul asupra surselor. Sistemul nu folosește surse externe neoficiale pentru generarea răspunsurilor. Domeniile permise sunt definite în configurația facultăților, iar crawler-ul filtrează link-urile pentru a rămâne în aceste domenii. Această alegere reduce acoperirea posibilă, dar crește încrederea în sursele afișate.
 
-% cap4
-\chapter{Implementare}
-\section{Implementarea extensiei Google Chrome}
-\section{Implementarea backend-ului (API)}
-\section{Integrarea modelului conversațional}
-\section{Gestionarea interogărilor și generarea răspunsurilor}
-\section{Probleme întâlnite și soluții}
+Al treilea principiu este combinarea metodelor probabilistice cu reguli deterministe. Embeddings-urile și căutarea vectorială sunt utile pentru flexibilitate semantică, dar nu sunt suficiente pentru un sistem instituțional. De aceea, rezultatele sunt rerankate folosind semnale explicite: potrivirea facultății, tipul paginii, URL-ul, titlul, termenii de regulament și penalizările pentru pagini generice.
 
-% cap5
-\chapter{Testare și evaluare}
-\section{Metodologia testării}
-\section{Testarea chatbotului}
-\section{Rezultatele obținute}
-\section{Analiza limitărilor}
+Al patrulea principiu este localitatea. În stadiul de prototip, rularea locală permite control asupra datelor și reduce dependența de servicii remote. Această decizie este potrivită pentru o lucrare de licență deoarece face sistemul demonstrabil pe o configurație reproductibilă: Flask, Ollama, Qdrant și extensia Chrome.
 
-% cap6
-\chapter{Concluzii și direcții viitoare de dezvoltare}
-\section{Concluzii asupra lucrării}
-\section{Îmbunătățiri posibile}
+\section{Modelul datelor}
+Unitatea principală a sistemului nu este pagina întreagă, ci fragmentul de pagină. Paginile web pot conține mult text irelevant, iar unele documente oficiale sunt lungi. Segmentarea în fragmente permite o căutare mai fină și reduce cantitatea de context trimisă modelului generativ. Fiecare fragment este salvat atât în indexul JSON, cât și ca payload în Qdrant.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.6cm}|>{\raggedright\arraybackslash}p{10cm}|}
+\hline
+\textbf{Câmp} & \textbf{Rol în sistem} \\
+\hline
+\texttt{chunk\_id} & Identificator stabil pentru fragment, folosit la deduplicare și la stocarea punctelor vectoriale. \\
+\hline
+\texttt{faculty\_id} & Leagă fragmentul de contextul general UVT sau de o facultate concretă. \\
+\hline
+\texttt{page\_type} & Clasifică pagina ca orar, contact, admitere, burse, regulamente, studenți sau general. \\
+\hline
+\texttt{title} & Oferă un semnal lexical puternic și este afișat în sursele returnate utilizatorului. \\
+\hline
+\texttt{url} & Păstrează legătura cu pagina oficială și permite deduplicarea surselor. \\
+\hline
+\texttt{chunk\_text} & Conține textul efectiv folosit pentru retrieval, verificare și generare. \\
+\hline
+\texttt{last\_indexed} & Indică momentul la care fragmentul a fost introdus în index. \\
+\hline
+\end{tabular}
+\caption{Câmpurile principale ale unui fragment indexat}
+\end{table}
+
+Acest model de date are avantajul că păstrează o legătură directă între răspuns și sursă. Chiar dacă un fragment este recuperat prin similaritate vectorială, backend-ul poate afișa URL-ul exact al paginii și poate calcula semnale suplimentare pe titlu și conținut. În plus, indexul JSON rămâne inspectabil manual, ceea ce este util în dezvoltare și debugging.
+
+\section{Fluxul de indexare}
+Fluxul de indexare construiește baza de cunoștințe locală. Pentru fiecare sursă oficială configurată, sistemul pornește de la URL-uri de bază și de la rute prioritare, precum \texttt{/orare/}, \texttt{/burse/}, \texttt{/contact/}, \texttt{/admitere/}, \texttt{/regulamente/} sau \texttt{/metodologie/}. Dacă sunt disponibile sitemap-uri, acestea sunt folosite pentru descoperire mai largă. Apoi, link-urile candidate sunt filtrate astfel încât să rămână în domeniile oficiale permise.
+
+Paginile acceptate sunt descărcate și convertite în text. Pentru HTML se elimină elementele irelevante precum meniuri, scripturi, formulare sau bannere. Pentru PDF și DOCX se extrage textul cu biblioteci dedicate, iar pentru imagini sau PDF-uri scanate există suport OCR opțional. Textul este limitat și împărțit în fragmente, pentru ca fiecare fragment să poată fi comparat eficient cu întrebările utilizatorilor.
+
+Fiecare fragment primește metadate: identificator, facultate, tip de pagină, titlu, URL, text și momentul indexării. Documentul rezultat este salvat ca index JSON, iar fragmentele sunt transformate în embeddings și încărcate în Qdrant. Astfel, sistemul păstrează atât o reprezentare textuală inspectabilă, cât și una vectorială optimizată pentru căutare semantică.
+
+La nivel operațional, indexarea poate rula manual sau la pornirea backend-ului. Pentru demonstrații, reconstrucția completă a indexului poate fi pornită înaintea prezentării, iar extensia afișează progresul. Această funcționalitate este utilă deoarece un index incomplet poate induce răspunsuri greșite. În timpul indexării, endpoint-ul de chat este blocat controlat și returnează un mesaj temporar, în loc să răspundă dintr-o stare parțială.
+
+\section{Fluxul de interogare}
+La primirea unei întrebări, backend-ul normalizează textul, aplică reguli pentru corectarea unor greșeli frecvente și detectează intenția. Dacă utilizatorul a selectat o facultate, aceasta devine filtru principal. Dacă a selectat contextul general UVT, backend-ul poate încerca să deducă facultatea din întrebare sau din istoricul recent.
+
+Întrebarea este transformată în embedding cu Ollama și trimisă către Qdrant. Căutarea vectorială folosește filtre pe \texttt{faculty\_id} și \texttt{page\_type}. Pentru robustețe, sistemul execută mai multe treceri de căutare: întâi cu filtre stricte, apoi cu filtre mai largi. Rezultatele semantice sunt completate printr-un backfill lexical, util când vectorii nu surprind suficient semnalele explicite din URL sau titlu.
+
+După recuperare, candidații sunt reordonați determinist. Scorul final combină suprapuneri lexicale, potrivirea facultății, preferința pentru tipul paginii, semnale din URL, penalizări pentru pagini generice și bonusuri pentru documente de regulament sau metodologie. Rezultatul final este un set mic de surse diverse, de regulă cel mult un fragment per URL.
+
+\begin{algorithm}[H]
+\caption{Procesarea unei întrebări în UVT Asist}
+\begin{algorithmic}[1]
+\Require întrebare, facultate selectată, istoric conversațional
+\Ensure răspuns, surse oficiale, scor de încredere
+\State normalizează întrebarea și corectează termeni frecvenți
+\State determină facultatea efectivă și intenția întrebării
+\If{întrebarea necesită clarificarea facultății}
+    \State returnează mesaj de clarificare
+\EndIf
+\State caută candidați în Qdrant cu filtre pe facultate și tip de pagină
+\State completează rezultatele cu fallback lexical din indexul JSON
+\State calculează scorurile deterministe și selectează surse diverse
+\State verifică live sursele de top, dacă funcția este activată
+\State calculează nivelul de încredere
+\If{întrebarea este de navigare și încrederea este suficientă}
+    \State construiește răspuns determinist
+\ElsIf{dovezile sunt slabe}
+    \State returnează mesaj de limitare
+\Else
+    \State construiește promptul RAG și apelează modelul Ollama
+\EndIf
+\State returnează răspunsul, sursele și metadatele
+\end{algorithmic}
+\end{algorithm}
+
+\section{Controlul generării}
+Generarea cu modelul de limbaj este folosită doar când există dovezi suficiente. Pentru întrebări de navigare, precum orar, contact sau admitere, sistemul poate construi răspunsul direct, fără LLM. Pentru întrebări cu încredere scăzută, backend-ul returnează un mesaj de limitare și sursele apropiate, evitând generarea unui text care ar putea părea mai sigur decât este.
+
+Când modelul este folosit, promptul include facultatea selectată, nivelul de încredere, intenția detectată, istoricul recent și fragmentele oficiale recuperate. Promptul impune răspuns în limba română, interzice explicațiile interne și cere folosirea exclusivă a contextului oficial. Dacă modelul produce un răspuns cu semne de comportament nedorit, backend-ul revine la un răspuns local determinist.
+
+\section{Verificare live și cache}
+Indexul local oferă viteză și stabilitate, dar paginile oficiale se pot schimba. Pentru a reduce acest risc, sistemul poate reverifica live un număr mic de surse de top. Verificarea live este intenționat limitată pentru a menține timpul de răspuns previzibil și pentru a evita comportamentul nedeterminist al unei căutări web largi. Rezultatele sunt păstrate temporar în cache, iar interfața marchează dacă sursele principale au fost verificate live.
+
+\chapter{Componente și funcționalități}
+
+\section{Structura proiectului}
+Proiectul este organizat în două zone principale: \texttt{backend/} și \texttt{extension/}. Directorul \texttt{backend/} conține serverul Flask, logica de indexare, retriever-ul, integrarea cu Ollama, integrarea cu Qdrant, extragerea textului din pagini și testele automate. Directorul \texttt{extension/} conține fișierul \texttt{manifest.json}, interfața popup-ului și logica JavaScript care comunică cu backend-ul local.
+
+Această structură este potrivită pentru o aplicație de tip extensie browser cu servicii locale. Frontend-ul rămâne ușor de instalat în Chrome, iar backend-ul poate fi rulat și testat independent. În plus, există și o interfață HTML de test, folosită doar pentru dezvoltare, care permite apelarea endpoint-urilor fără încărcarea extensiei în browser.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{9.6cm}|}
+\hline
+\textbf{Componentă} & \textbf{Responsabilitate} \\
+\hline
+\texttt{app.py} & Expune API-ul Flask, orchestrează chat-ul, verifică starea componentelor și salvează feedback. \\
+\hline
+\texttt{build\_index.py} & Descoperă pagini oficiale, descarcă surse și construiește indexul local. \\
+\hline
+\texttt{retriever.py} & Normalizează întrebarea, detectează intenții, caută în Qdrant și rerankează candidații. \\
+\hline
+\texttt{page\_index.py} & Definește schema indexului, clasifică pagini și segmentează textul în fragmente. \\
+\hline
+\texttt{vector\_store.py} & Inițializează Qdrant, creează indexuri de payload și execută căutări vectoriale. \\
+\hline
+\texttt{popup.js} & Gestionează conversația, stările UI, istoricul, feedback-ul și apelurile către backend. \\
+\hline
+\end{tabular}
+\caption{Structura principală a proiectului UVT Asist}
+\end{table}
+
+\section{Extensia Chrome}
+Extensia Chrome este interfața principală a aplicației. Ea oferă un popup cu selector de facultate, câmp pentru întrebare, afișare de mesaje, surse oficiale, nivel de încredere, indicator de verificare live și stare a backend-ului. Extensia păstrează istoricul conversației pe facultate și o listă scurtă de întrebări recente folosind mecanismul de stocare locală al browserului.
+
+Din punct de vedere al produsului, această interfață este potrivită pentru scenariul de utilizare. Studentul poate întreba rapid fără a naviga manual prin mai multe meniuri. Din punct de vedere tehnic, extensia trimite cereri HTTP către backend-ul local, citește endpoint-ul \texttt{/health}, încarcă lista de facultăți din \texttt{/faculties} și trimite întrebările la \texttt{/chat}.
+
+Popup-ul nu încearcă să ascundă starea tehnică a sistemului. Dacă backend-ul este disponibil și indexul este pregătit, utilizatorul vede o stare de sistem pregătit. Dacă indexarea rulează, interfața afișează progresul. Dacă backend-ul nu răspunde, butoanele rămân controlate, iar mesajul indică faptul că serviciul local trebuie pornit. Această vizibilitate este importantă deoarece prototipul depinde de mai multe procese locale.
+
+\section{Backend-ul Flask}
+Backend-ul Flask este componenta de orchestrare. Flask este un framework web Python minimalist, potrivit pentru prototipuri și servicii API locale \cite{FlaskDocs}. În proiect, backend-ul expune endpoint-uri pentru stare, listă de facultăți, status de indexare, chat și feedback.
+
+Endpoint-ul \texttt{/health} raportează disponibilitatea Ollama, modelele configurate, starea indexului JSON, starea colecției Qdrant, modul de retrieval, cache-urile și progresul indexării. Endpoint-ul \texttt{/indexing/status} permite extensiei să afișeze progresul indexării. Endpoint-ul \texttt{/feedback} salvează feedback-ul utilizatorului într-un fișier JSONL, util pentru analiză și îmbunătățiri ulterioare.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{9.6cm}|}
+\hline
+\textbf{Endpoint} & \textbf{Rol} \\
+\hline
+\texttt{/health} & Returnează starea Ollama, Qdrant, index JSON, cache-uri, mod de retrieval și readiness. \\
+\hline
+\texttt{/faculties} & Returnează lista facultăților configurate pentru selectorul din extensie. \\
+\hline
+\texttt{/indexing/status} & Returnează progresul indexării de startup. \\
+\hline
+\texttt{/chat} & Primește întrebarea, facultatea și istoricul, apoi returnează răspunsul și sursele. \\
+\hline
+\texttt{/feedback} & Salvează votul utilizatorului și metadatele răspunsului pentru analiză ulterioară. \\
+\hline
+\end{tabular}
+\caption{Endpoint-urile principale ale backend-ului}
+\end{table}
+
+Backend-ul aplică și validări defensive. Întrebările goale primesc răspuns dedicat, payload-urile invalide nu produc eroare internă, istoricul este limitat ca număr de mesaje și lungime, iar întrebarea este trunchiată la o dimensiune configurabilă. Aceste limite previn comportamente necontrolate și fac sistemul mai potrivit pentru demonstrație.
+
+\section{Indexarea și extragerea conținutului}
+Indexarea începe cu lista de surse oficiale și cu rute considerate prioritare. Pentru fiecare facultate sunt generate URL-uri candidate din baza configurată, din sitemap-uri și din link-uri descoperite în paginile HTML. Crawler-ul acceptă pagini HTML, documente PDF, DOCX, fișiere text și, opțional, imagini pentru OCR. Link-urile sunt filtrate astfel încât să rămână pe domeniile oficiale configurate.
+
+Extragerea textului diferă în funcție de tipul resursei. Pentru HTML, sistemul elimină meniuri, navigații, formulare, bannere, scripturi și alte elemente care pot introduce zgomot. Pentru PDF-uri se folosește extragerea de text, cu fallback OCR opțional atunci când documentul pare scanat. Pentru DOCX se extrag paragrafe și tabele. Rezultatul este normalizat și limitat ca dimensiune pentru a evita consumul excesiv de memorie.
+
+Clasificarea paginilor se face prin indicii din URL, titlu și conținut. De exemplu, o pagină cu \texttt{/orare/} în URL și cu termenul „orar” în titlu este clasificată ca pagină de orar. O pagină care conține termeni precum „metodologie”, „regulament” sau „procedură” primește prioritate pentru tipul \texttt{regulamente}. Clasificarea nu trebuie să fie perfectă, dar trebuie să ofere semnale suficient de bune pentru filtrare și reranking.
+
+\section{Configurația facultăților}
+Aplicația conține o configurație a surselor oficiale. Aceasta include contextul general UVT, site-ul de admitere și site-urile facultăților. Fiecare intrare are un identificator scurt, un nume afișabil și o listă de URL-uri de bază. Această structură permite filtrarea rezultatelor și prezentarea unei liste clare în extensie.
+
+Pentru Facultatea de Informatică, de exemplu, întrebările despre orar trebuie să favorizeze pagina \texttt{info.uvt.ro/orare}. Pentru întrebările generale despre burse, sistemul trebuie să favorizeze documente sau pagini UVT, nu neapărat o pagină a unei facultăți. Această diferențiere justifică existența câmpului \texttt{faculty\_id} în fiecare fragment indexat.
+
+Configurația nu este doar o listă pentru interfață. Ea definește spațiul permis de căutare. Dacă o facultate are mai multe domenii oficiale, acestea pot fi adăugate ca URL-uri de bază. Dacă o întrebare este adresată în contextul unei facultăți, sistemul caută mai întâi în sursele acelei facultăți și apoi poate lua în calcul sursele UVT generale, mai ales pentru regulamente sau metodologii aplicabile tuturor studenților.
+
+\section{Retriever-ul}
+Retriever-ul este componenta care transformă întrebarea în surse candidate. El realizează normalizarea diacriticelor, eliminarea diferențelor de formă, corectarea unor greșeli frecvente și detectarea intenției. De exemplu, formulări precum „orrarul” sau „fac de info” sunt mapate către concepte relevante pentru orar și informatică.
+
+După analiza întrebării, retriever-ul construiește preferințe pentru tipurile de pagini. O întrebare despre „burse” poate prefera pagini de burse și regulamente, iar o întrebare despre cumularea burselor este tratată ca întrebare de metodologie sau regulament. Această clasificare reduce riscul ca o pagină generică să fie aleasă înaintea unei metodologii oficiale.
+
+Scorarea finală este hibridă. Rezultatul semantic din Qdrant este combinat cu semnale deterministe: titlu, URL, text, facultate, tip de pagină, document oficial, întrebări de politici și penalizări pentru homepage-uri. Prin această combinație, sistemul păstrează flexibilitatea embeddings-urilor, dar rămâne controlabil.
+
+\section{Integrarea Ollama și Qdrant}
+Ollama este folosit în două momente diferite. În etapa de indexare, fiecare fragment este transformat într-un text de embedding care include titlul, URL-ul, facultatea, tipul paginii și conținutul oficial. Acest text este trimis modelului de embedding, iar vectorul rezultat este încărcat în Qdrant. În etapa de chat, întrebarea utilizatorului este transformată într-un embedding pentru căutare semantică.
+
+Qdrant stochează un punct vectorial pentru fiecare fragment. Pe lângă vector, fiecare punct conține payload-ul textual și metadatele necesare. Căutarea poate fi filtrată după \texttt{faculty\_id} și \texttt{page\_type}, ceea ce este esențial pentru reducerea spațiului de rezultate. Fără aceste filtre, o întrebare despre orar ar putea primi rezultate de la o altă facultate sau pagini generale care folosesc termeni similari.
+
+Modelul generativ Ollama este apelat doar după selecția surselor. Promptul final conține contextul oficial și instrucțiuni stricte: răspuns în română, concizie, folosirea exclusivă a contextului, evitarea speculațiilor și atenție specială la întrebările de regulament. Astfel, modelul devine un strat de formulare, nu o autoritate factuală independentă.
+
+\section{Scorul de încredere}
+Fiecare set de rezultate primește un nivel de încredere: \texttt{high}, \texttt{medium} sau \texttt{low}. Scorul ține cont de puterea rezultatului principal, diferența față de următorul rezultat, numărul de surse distincte și semnalele de potrivire. Dacă lipsesc dovezi directe sau dacă sursa este prea generică, scorul este limitat.
+
+Acest mecanism este important deoarece nu toate întrebările pot primi un răspuns sigur. În loc să ascundă incertitudinea, sistemul o comunică. Interfața afișează nivelul de încredere, iar backend-ul poate decide să nu invoce modelul de limbaj atunci când dovezile sunt slabe.
+
+\section{Răspunsuri, surse și feedback}
+Răspunsul trimis către extensie conține textul final, lista surselor, facultatea potrivită, scorul de încredere, profilul întrebării, modul de retrieval, modul de generare și profilul dovezilor. Sursele sunt deduplicate pe URL și afișate ca link-uri oficiale. Astfel, utilizatorul poate verifica imediat pagina pe care se bazează răspunsul.
+
+Feedback-ul utilizatorului este salvat împreună cu întrebarea, răspunsul, sursele, scorul de încredere și modul de generare. Într-o etapă ulterioară, aceste date pot fi folosite pentru identificarea întrebărilor problematice, a surselor slab indexate sau a cazurilor în care reranking-ul trebuie ajustat.
+
+\chapter{Validare, limite și direcții viitoare}
+
+\section{Strategia de validare}
+Validarea prototipului se face prin teste automate și prin scenarii manuale de demonstrație. Testele automate acoperă componente esențiale: corectarea întrebărilor, preferința pentru pagini stabile de admitere față de știri vechi, clasificarea paginilor, normalizarea URL-urilor, rezistența la payload-uri greșite și comportamentul sistemului când indexarea este în desfășurare.
+
+Scenariile manuale verifică situații reprezentative pentru studenți:
+\begin{itemize}
+    \item pentru Facultatea de Informatică, întrebarea „Unde găsesc orarul?” trebuie să favorizeze pagina oficială de orare;
+    \item întrebarea despre secretariatul Facultății de Informatică trebuie să favorizeze pagina de contact;
+    \item întrebările despre cumularea burselor trebuie să favorizeze metodologii sau regulamente oficiale;
+    \item întrebările despre admitere trebuie să favorizeze paginile stabile ale procesului de admitere, nu știri vechi;
+    \item formulările cu greșeli, precum „orrarul”, trebuie să fie corectate suficient pentru a conduce la sursa potrivită;
+    \item oprirea backend-ului trebuie să fie afișată clar în extensie.
+\end{itemize}
+
+\section{Testarea automată}
+Testele automate sunt concentrate pe comportamente cu risc ridicat. O parte dintre teste verifică retriever-ul: corectarea termenilor greșiți, detectarea intențiilor și alegerea paginilor potrivite. De exemplu, testul pentru formularea „orrarul” confirmă că sistemul ajunge la intenția de orar, iar testul pentru admitere confirmă că o pagină stabilă despre procesul de admitere este preferată față de o știre veche.
+
+O altă categorie de teste verifică indexul. Aceste teste validează normalizarea URL-urilor, detectarea tipului de pagină, existența câmpurilor necesare pentru payload-ul vectorial și limitarea dimensiunii fragmentelor. Limitarea fragmentelor este importantă deoarece paginile foarte mari sau textul fără spații pot produce probleme de memorie sau prompturi prea lungi.
+
+Testele backend verifică robustețea API-ului. Un payload JSON greșit nu trebuie să producă o eroare 500. O întrebare cu dovezi slabe nu trebuie să invoce modelul de limbaj. O întrebare de navigare cu rezultat sigur trebuie să primească răspuns determinist. De asemenea, când indexarea este în desfășurare, chat-ul trebuie să se oprească temporar și să returneze statusul de indexare.
+
+Această acoperire nu demonstrează că aplicația răspunde corect la orice întrebare, dar verifică proprietățile esențiale ale arhitecturii: sursele specifice sunt preferate, fallback-ul funcționează, generarea este controlată și stările de eșec sunt tratate explicit.
+
+\section{Evaluarea scenariilor manuale}
+Evaluarea manuală urmărește comportamentul perceput de utilizator. Pentru fiecare scenariu, se verifică trei aspecte: sursa de top, calitatea răspunsului și metadatele afișate. Sursa de top trebuie să fie oficială și potrivită. Răspunsul trebuie să fie scurt și să nu adauge informații nesusținute. Metadatele trebuie să indice facultatea potrivită, nivelul de încredere și modul de retrieval.
+
+Pentru întrebările de orar, succesul înseamnă orientarea către pagina oficială de orare a facultății selectate. Pentru contact, succesul înseamnă pagina de contact sau secretariat. Pentru admitere, succesul înseamnă preferința pentru pagini stabile și nu pentru știri vechi. Pentru burse, succesul înseamnă găsirea unei metodologii sau a unei pagini instituționale relevante, nu doar a unei pagini generice despre studenți.
+
+În scenariile cu dovezi slabe, succesul nu înseamnă neapărat un răspuns factual complet. Un rezultat corect poate fi un mesaj de tip „nu am găsit suficiente dovezi oficiale”. Această interpretare este importantă deoarece aplicația urmărește acuratețe și transparență, nu doar completarea conversației cu orice preț.
+
+\section{Metrici calitative}
+Pentru un prototip de licență, evaluarea poate fi formulată prin metrici calitative. Prima metrică este relevanța sursei de top: dacă primul link afișat este pagina pe care un student ar trebui să o consulte. A doua metrică este acoperirea surselor: dacă lista de surse oferă cel puțin o alternativă oficială utilă. A treia metrică este fidelitatea răspunsului: dacă textul final poate fi susținut de fragmentele recuperate.
+
+O altă metrică este comportamentul la incertitudine. Un sistem conversațional poate părea mai bun dacă răspunde mereu, dar pentru informații instituționale această proprietate este periculoasă. De aceea, un răspuns prudent, însoțit de surse apropiate, este preferabil unui răspuns detaliat fără dovezi. În UVT Asist, această metrică este susținută de scorul de încredere și de pragul sub care generarea este evitată.
+
+Ultima metrică este stabilitatea demonstrației. Pentru o aplicație locală, utilizatorul trebuie să poată vedea rapid dacă sistemul este pregătit. Endpoint-ul de health, progresul indexării și mesajele de backend indisponibil contribuie la această stabilitate.
+
+\section{Limite}
+Sistemul depinde de calitatea indexului local. Dacă o pagină oficială lipsește din index sau dacă textul nu poate fi extras corect, răspunsul poate fi incomplet. Documentele PDF scanate pot necesita OCR, iar calitatea OCR-ului poate varia. De asemenea, dacă o pagină se modifică după indexare, sistemul poate folosi informații depășite până la reconstrucția indexului, cu excepția surselor reverificate live.
+
+O altă limită este performanța locală. Ollama și Qdrant trebuie să ruleze pe mașina utilizatorului sau pe o mașină de demonstrație. Timpul de răspuns depinde de modelul ales, de dimensiunea indexului și de hardware. Pentru o utilizare instituțională reală, ar putea fi necesară migrarea către un serviciu administrat intern, cu resurse controlate.
+
+În plus, un scor de încredere este o aproximare, nu o garanție matematică a adevărului. El indică potrivirea dintre întrebare și sursele recuperate. Decizia finală pentru informații administrative importante trebuie să rămână verificabilă prin sursa oficială afișată.
+
+\section{Amenințări la validitate}
+O amenințare la validitate este dimensiunea setului de întrebări folosit pentru testare. Scenariile selectate acoperă întrebări importante, dar nu includ toate formulările posibile ale studenților. În practică, utilizatorii pot folosi abrevieri, greșeli diferite, întrebări compuse sau contexte conversaționale mai lungi. Pentru o evaluare mai solidă, ar fi necesar un set mai mare de întrebări colectate de la studenți.
+
+O a doua amenințare este dependența de starea site-urilor oficiale în momentul indexării. Dacă o pagină este temporar indisponibilă sau dacă structura HTML se schimbă, crawler-ul poate extrage mai puțin conținut. De asemenea, o evaluare făcută pe un index construit într-o anumită zi poate să nu reflecte perfect comportamentul după câteva luni.
+
+O a treia amenințare este variația modelelor locale. Modelul de generare și modelul de embedding sunt configurabile. Schimbarea lor poate modifica atât calitatea răspunsurilor, cât și scorurile semantice. De aceea, atunci când modelul de embedding se schimbă, indexul vectorial trebuie reconstruit, iar scenariile de validare trebuie reluate.
+
+\section{Considerente de securitate și confidențialitate}
+Prototipul rulează local și nu trimite întrebările către un serviciu AI extern. Acest lucru este un avantaj pentru confidențialitate, dar nu elimină toate responsabilitățile. Backend-ul acceptă cereri HTTP locale, deci trebuie tratat ca un serviciu de dezvoltare, nu ca un server expus public. Într-o versiune instituțională, ar fi necesare autentificare, control de acces, rate limiting și monitorizare.
+
+Feedback-ul este salvat local în format JSONL. Chiar dacă scopul lui este îmbunătățirea sistemului, el poate conține întrebări formulate liber de utilizatori. Într-o versiune distribuită, ar trebui stabilite reguli de retenție, anonimizare și informare a utilizatorilor. Pentru lucrarea de față, feedback-ul este tratat ca mecanism de dezvoltare și demonstrație.
+
+Un alt aspect este integritatea surselor. Sistemul presupune că domeniile configurate sunt oficiale și că paginile accesate prin HTTPS aparțin instituției. Pentru o implementare de producție, ar fi utilă monitorizarea schimbărilor majore, validarea certificatelor, auditarea configurației de domenii și păstrarea unui istoric al indexărilor.
+
 \section{Direcții viitoare}
+Direcțiile de dezvoltare includ reindexare programată, monitorizarea modificărilor în sursele oficiale, extinderea setului de teste, evaluare cu studenți reali și îmbunătățirea OCR-ului pentru documente scanate. O altă direcție utilă este construirea unui set standard de întrebări și răspunsuri de referință, pentru a compara obiectiv variante diferite de embedding, reranking și modele generative.
+
+La nivel de interfață, extensia poate fi extinsă cu explicații mai clare pentru întrebările neacoperite, gruparea surselor pe categorii și sugestii de reformulare. La nivel de backend, ar fi utilă separarea mai explicită între răspunsuri de navigare, răspunsuri administrative și răspunsuri de regulament, astfel încât fiecare categorie să aibă reguli de verificare adaptate.
+
+\chapter{Concluzii}
+
+Lucrarea a prezentat proiectarea unui asistent inteligent local pentru accesul la informațiile oficiale UVT. Problema abordată este una practică: informația există, dar este distribuită între mai multe site-uri și nu este întotdeauna ușor de găsit rapid. UVT Asist propune o interfață conversațională integrată în browser, susținută de un backend care caută, verifică și sintetizează informații din surse oficiale.
+
+Din punct de vedere teoretic, soluția se bazează pe combinarea regăsirii informației cu modelele de limbaj. Căutarea semantică oferă flexibilitate, regulile deterministe oferă control, iar generarea locală oferă o interfață naturală. Prin afișarea surselor, scorului de încredere și stării de verificare, sistemul urmărește să rămână transparent și prudent.
+
+Prototipul demonstrează că o arhitectură RAG locală este fezabilă pentru un scenariu universitar. Totuși, calitatea finală depinde de acoperirea indexului, de actualizarea surselor și de evaluarea continuă pe întrebări reale. Cele mai importante direcții de maturizare sunt automatizarea reindexării, evaluarea sistematică și îmbunătățirea mecanismelor de clarificare pentru întrebările ambigue.
 
 \chapter{Plan de activitate}
+Activitatea de realizare a lucrării a fost organizată în etape succesive:
 
-Realizarea lucrării de licență este organizată pe etape clare, distribuite astfel:
+\begin{itemize}
+    \item \textbf{Decembrie -- Ianuarie:} documentare și analiză. Au fost studiate conceptele de bază privind asistenții conversaționali, extensiile Google Chrome, arhitectura web a UVT, retrieval-ul și modelele conversaționale.
+    \item \textbf{Ianuarie -- Februarie:} proiectare arhitecturală. Au fost definite componentele sistemului, fluxul de procesare, structura extensiei și responsabilitățile backend-ului.
+    \item \textbf{Februarie -- Martie:} implementarea primelor componente. Au fost dezvoltate extensia Chrome, endpoint-urile Flask și mecanismele inițiale de căutare și răspuns.
+    \item \textbf{Aprilie:} integrarea cu sursele oficiale UVT. Au fost dezvoltate mecanismele de indexare, extragere a textului, segmentare, clasificare a paginilor și căutare în surse oficiale.
+    \item \textbf{Mai -- Iunie:} rafinare, testare și redactare. Au fost adăugate Qdrant, embeddings locale, reranking determinist, scor de încredere, stări de interfață, feedback și textul final al lucrării.
+\end{itemize}
 
-
-Decembrie: Documentare și analiză. Studierea conceptelor de bază privind chatboții, extensiile Google Chrome, arhitectura web a UVT, metode de procesare a limbajului natural și modele conversaționale.
-
-Ianuarie: Proiectare arhitectură chatbot. Definirea componentelor: extensie Chrome, backend API, modul NLP, sistem de mapare a site-urilor UVT.
-
-Februarie - Martie: Implementare extensie Chrome și backend. Dezvoltarea interfeței extensiei, conectarea la API, implementarea mecanismului de procesare a întrebărilor.
-
-Aprilie: Integrare cu resursele UVT și testare. Validarea răspunsurilor chatbotului, testarea navigării asistate, optimizări ale modelului.
-
-Mai: Finalizare lucrare și pregătire prezentare. Redactarea finală a lucrării, generarea anexelor, pregătirea prezentării pentru comisie.
-
-
-
-
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografie}
 \bibliographystyle{alpha}
-\nocite{*}
 \bibliography{mybib}
-\addcontentsline{toc}{chapter}{Bibliography}
 
-\end{document} 
+\end{document}
