@@ -2,12 +2,17 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[romanian]{babel}
 \usepackage{amsmath,amsthm,amssymb,graphicx}
-\usepackage[left=1.2in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
+\usepackage[left=1.2in,right=1.2in,top=1in,bottom=1in]{geometry}
 \usepackage{listings}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[romanian]{babel}
+\usepackage{paralist}
+\usepackage{hyphenat}
+\usepackage{algorithm,algpseudocode}
+\usepackage[inline]{enumitem}
 \usepackage{setspace}
 \usepackage{float}
 \usepackage{array}
@@ -40,28 +45,35 @@
 \newcommand{\thesistitle}{UVT Asist: asistent inteligent pentru accesul la informațiile oficiale ale UVT}
 \newcommand{\studentname}{Pavel Cătălin}
 \newcommand{\coordinatorname}{Asist. Drd. Theodor Radu Grumeza}
+\newcommand{\studyprogram}{PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}
+\newcommand{\thesistype}{LUCRARE DE LICENȚĂ}
+\newcommand{\thesisyear}{2026}
 
 \begin{document}
 \onehalfspacing
 
 \thispagestyle{empty}
 \begin{center}
+\begin{figure}[h!]
 \vspace{-20pt}
-\includegraphics[width=100pt]{imagini/FI.png}
+\begin{center}
+\includegraphics[width=100pt]{FI.png}
+\end{center}
+\end{figure}
 
 {\large{\bf UNIVERSITATEA DE VEST DIN TIMIȘOARA
 
 FACULTATEA DE INFORMATICĂ
 
-PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
+\studyprogram}}
 
-\vspace{90pt}
-{\huge {\bf LUCRARE DE LICENȚĂ}}
+\vspace{120pt}
+{\huge {\bf \thesistype}}
 
 \vspace{25pt}
 {\Large{\bf \thesistitle}}
 
-\vspace{120pt}
+\vspace{110pt}
 \end{center}
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
@@ -72,7 +84,7 @@ PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
 \begin{center}
 {\bf TIMIȘOARA
 
-2026}
+\thesisyear}
 \end{center}
 \newpage
 
@@ -82,15 +94,15 @@ PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
 
 FACULTATEA DE INFORMATICĂ
 
-PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
+\studyprogram}}
 
-\vspace{90pt}
-{\huge {\bf LUCRARE DE LICENȚĂ}}
+\vspace{120pt}
+{\huge {\bf \thesistype}}
 
 \vspace{25pt}
 {\Large{\bf \thesistitle}}
 
-\vspace{120pt}
+\vspace{110pt}
 \end{center}
 
 {\large\noindent{\bf COORDONATOR:\hfill ABSOLVENT:}
@@ -101,7 +113,7 @@ PROGRAMUL DE STUDII DE LICENȚĂ: Informatică}}
 \begin{center}
 {\bf TIMIȘOARA
 
-2026}
+\thesisyear}
 \end{center}
 \newpage
 
@@ -119,6 +131,12 @@ Lucrarea prezintă proiectarea și implementarea aplicației \textbf{UVT Asist},
 Soluția folosește o arhitectură de tip Retrieval-Augmented Generation. Paginile oficiale sunt descoperite, descărcate, curățate, împărțite în fragmente, transformate în reprezentări vectoriale cu Ollama și stocate în Qdrant. La interogare, sistemul combină căutarea semantică, filtrele pe facultate și tip de pagină, reranking-ul determinist și generarea locală a răspunsului. Pentru întrebările de navigare sau pentru cazurile cu dovezi insuficiente, backend-ul poate evita modelul generativ și poate folosi răspunsuri deterministe sau mesaje explicite de incertitudine.
 
 Lucrarea tratează fundamentele teoretice ale asistenților conversaționali, ale sistemelor de regăsire a informației, ale modelelor de limbaj și ale căutării vectoriale, apoi le conectează cu deciziile tehnice din proiectul UVT Asist. Accentul este pus pe utilizarea surselor oficiale, pe transparența răspunsurilor, pe rularea locală a componentelor AI și pe limitarea riscului de generare a unor informații neverificate.
+
+\newpage
+\section*{Declarație de integritate științifică}
+Declar că această lucrare de licență reprezintă un raport original și constituie propria mea muncă, realizată sub coordonarea \coordinatorname. În această lucrare, metodele de cercetare, precum și procesele de colectare, analiză și interpretare a datelor, sunt prezentate corect, iar toate sursele au fost citate corespunzător acolo unde am utilizat idei și/sau materiale vizuale aparținând altor autori.
+
+Am utilizat instrumente de inteligență artificială generativă pentru sprijin punctual în organizarea textului și ajustarea structurii documentului. Detaliile se regăsesc în Anexa \ref{genAIUsage}.
 
 \newpage
 \tableofcontents
@@ -162,7 +180,7 @@ Capitolul al doilea prezintă fundamentele teoretice relevante: regăsirea infor
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=15.4cm]{imagini/site_uvt.png}
+    \includegraphics[width=\textwidth]{imagini/site_uvt.png}
     \caption{Exemplu de context web în care utilizatorul poate avea nevoie de asistență pentru navigare}
 \end{figure}
 
@@ -585,6 +603,13 @@ Din punct de vedere teoretic, soluția se bazează pe combinarea regăsirii info
 
 Prototipul demonstrează că o arhitectură RAG locală este fezabilă pentru un scenariu universitar. Totuși, calitatea finală depinde de acoperirea indexului, de actualizarea surselor și de evaluarea continuă pe întrebări reale. Cele mai importante direcții de maturizare sunt automatizarea reindexării, evaluarea sistematică și îmbunătățirea mecanismelor de clarificare pentru întrebările ambigue.
 
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografie}
+\bibliographystyle{alpha}
+\bibliography{mybib}
+
+\appendix
 \chapter{Plan de activitate}
 Activitatea de realizare a lucrării a fost organizată în etape succesive:
 
@@ -596,10 +621,25 @@ Activitatea de realizare a lucrării a fost organizată în etape succesive:
     \item \textbf{Mai -- Iunie:} rafinare, testare și redactare. Au fost adăugate Qdrant, embeddings locale, reranking determinist, scor de încredere, stări de interfață, feedback și textul final al lucrării.
 \end{itemize}
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Bibliografie}
-\bibliographystyle{alpha}
-\bibliography{mybib}
+\chapter{Utilizarea instrumentelor de inteligență artificială generativă}
+\label{genAIUsage}
+În această anexă este prezentată o sinteză a modului în care au fost utilizate instrumentele de inteligență artificială generativă în cadrul lucrării. O imagine de ansamblu este oferită în Tabelul \ref{tab:genAIOverview}.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline \rowcolor{blue!20}
+        Instrument AI & Scopul utilizării & Secțiuni în care a fost utilizat & Observații \\
+        \hline
+        OpenAI Codex / ChatGPT & Sprijin pentru alinierea structurii LaTeX la template-ul facultății și pentru verificarea compilării & Copertă, declarație de integritate științifică, bibliografie și anexe & Rezultatul a fost verificat prin compilare locală; instrumentul nu este tratat ca sursă bibliografică. \\
+        \hline
+    \end{tabularx}
+    \caption{Sinteza utilizării instrumentelor de inteligență artificială generativă}
+    \label{tab:genAIOverview}
+\end{table}
+
+\section{Detalii privind utilizarea OpenAI Codex / ChatGPT}
+\label{sectionChatGPT}
+Instrumentul a fost utilizat pentru reorganizarea documentului LaTeX conform template-ului oficial, fără introducerea unor surse bibliografice noi și fără modificarea argumentației tehnice a lucrării. Verificarea rezultatului s-a făcut prin inspectarea diferențelor și prin compilarea documentului.
 
 \end{document}
