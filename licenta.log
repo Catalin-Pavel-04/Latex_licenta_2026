@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  23 JUN 2026 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  23 JUN 2026 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -823,24 +823,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (licenta.aux)
 \openout1 = `licenta.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
@@ -902,23 +902,23 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count367
-Package hyperref Info: Link coloring OFF on input line 52.
+Package hyperref Info: Link coloring OFF on input line 69.
 (licenta.out) (licenta.out)
 \@outlinefile=\write4
 \openout4 = `licenta.out'.
 
-<FI.png, id=226, 578.8827pt x 290.0436pt>
+<FI.png, id=234, 578.8827pt x 290.0436pt>
 File: FI.png Graphic file (type png)
 <use FI.png>
-Package pdftex.def Info: FI.png  used on input line 60.
+Package pdftex.def Info: FI.png  used on input line 77.
 (pdftex.def)             Requested size: 100.0pt x 50.10338pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
 
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 
 (C:\Users\Catalin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -936,25 +936,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [7]
 Capitolul 1.
 
-Underfull \hbox (badness 5203) in paragraph at lines 148--149
+Underfull \hbox (badness 5203) in paragraph at lines 165--166
 \T1/cmr/m/n/12 Digitalizarea ser-vi-ci-i-lor uni-ver-si-tare a schim-bat mo-dul
  în care studen[]ii
  []
 
 [8
 
-] [9]
-<imagini/site_uvt.png, id=341, 1444.64719pt x 687.31781pt>
-File: imagini/site_uvt.png Graphic file (type png)
-<use imagini/site_uvt.png>
-Package pdftex.def Info: imagini/site_uvt.png  used on input line 183.
-(pdftex.def)             Requested size: 424.06033pt x 201.75018pt.
- [10 <./imagini/site_uvt.png>]
+] [9] [10]
 Capitolul 2.
 [11
 
 ] [12] [13] [14]
-Underfull \hbox (badness 2452) in paragraph at lines 250--251
+Underfull \hbox (badness 2452) in paragraph at lines 266--267
 []\T1/cmr/m/n/12 UVT Asist aplic  prin-ci-piul de-gra-d -rii con-tro-late. Dac 
  Qdrant sau
  []
@@ -964,7 +958,7 @@ Capitolul 3.
 [16
 
 ]
-Underfull \hbox (badness 1448) in paragraph at lines 275--276
+Underfull \hbox (badness 1448) in paragraph at lines 291--292
 \T1/cmr/m/n/12 Pe lâng  func[]ionalit []i, pro-iec-tul im-pune cerin[]e nefunc[
 ]ionale im-por-tante.
  []
@@ -976,23 +970,23 @@ Capitolul 4.
 ] [21] [22]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 400.
- [23] [24] [25]
+ [23] [24]
 Capitolul 5.
-[26
+[25
 
-] [27] [28] [29] [30]
+] [26] [27] [28] [29] [30]
 Capitolul 6.
 [31
 
-] [32] [33]
-Underfull \hbox (badness 1286) in paragraph at lines 587--588
+] [32] [33] [34]
+Underfull \hbox (badness 1286) in paragraph at lines 661--662
 \T1/cmr/m/n/12 Acest lu-cru este un avan-taj pen-tru confiden[]ialitate, dar nu
  eli-min  toate
  []
 
-[34] [35]
+[35] [36]
 Capitolul 7.
-[36
+[37
 
 ] (licenta.bbl
 Underfull \hbox (badness 2057) in paragraph at lines 24--28
@@ -1012,113 +1006,143 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--40
  / / qdrant . tech /
  []
 
-) [37
+) [38
 
 
 ]
 Anexa A.
-[38
+[39
 
 ]
 Anexa B.
 
-Underfull \hbox (badness 1845) in paragraph at lines 636--636
-[]|\T1/cmr/m/n/12 Sprijin pen-tru
+Underfull \hbox (badness 1365) in paragraph at lines 711--711
+[]|\T1/cmr/m/n/10.95 Zone în care a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-\T1/cmr/m/n/12 tu-rii La-TeX
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+[]|\T1/cmr/m/n/10.95 Sprijin pen-tru
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-\T1/cmr/m/n/12 la template-
+Underfull \hbox (badness 1275) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 or-ga-ni-za-rea tex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-[]|\T1/cmr/m/n/12 Copert ,
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 tu-lui, su-ges-tii
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-\T1/cmr/m/n/12 declara[]ie de
+Underfull \hbox (badness 1270) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 de re-fac-to-ri-zare,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-\T1/cmr/m/n/12 in-te-gri-tate
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 for-mu-l ri de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-[]\T1/cmr/m/n/12 tiin[]ific ,
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 documenta[]ie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-\T1/cmr/m/n/12 bi-bli-o-gra-fie []i
+Underfull \hbox (badness 5924) in paragraph at lines 711--711
+[]\T1/cmr/m/n/10.95 i ve-ri-fi-c ri de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-[]|\T1/cmr/m/n/12 Rezultatul a
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 documenta[]ia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--636
-\T1/cmr/m/n/12 fost ve-ri-fi-cat
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 pro-iec-tu-lui []i
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 636--636
-\T1/cmr/m/n/12 lo-cal ; in-stru-
+Underfull \hbox (badness 1137) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 unele de-ci-zii de
  []
 
-[39
 
-] (licenta.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 struc-tu-rare a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 este tra-tat ca
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 surs  bi-bli-o-gra-
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 fic  []i nu este
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
+\T1/cmr/m/n/10.95 re-zul-ta-tele au
+ []
+
+[40
+
+] [41] (licenta.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `licenta.out' has not changed.
-(rerunfilecheck)             Checksum: 53353DB7A7975DE71BF198C7B3CE9137;10045.
+(rerunfilecheck)             Checksum: A274DA89918398AFA84833D5BD80F503;10573.
  ) 
 Here is how much of TeX's memory you used:
- 25351 strings out of 467871
- 460265 string characters out of 5417408
- 866352 words of memory out of 5000000
- 53674 multiletter control sequences out of 15000+600000
- 651747 words of font info for 104 fonts, out of 8000000 for 9000
+ 25257 strings out of 467871
+ 457881 string characters out of 5417408
+ 871459 words of memory out of 5000000
+ 53563 multiletter control sequences out of 15000+600000
+ 656805 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,94p,632b,819s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,94p,632b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 ti1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecrm1000.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Catalin\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Catalin\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Catalin\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\Ca
-talin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\
-Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.
+pi600\ecbx1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecti1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Catalin\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Catalin\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Catalin\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Ca
+talin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\
+Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.
 pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1000.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx1728.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecbx2488.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecbx0700.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/Catalin/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Catalin/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Catal
-in/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Us
-ers/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb>
-Output written on licenta.pdf (39 pages, 2320178 bytes).
+crm0600.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecrm1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx0600.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Catalin\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Catalin\AppData\L
+ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Catalin\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\C
+atalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0700.pk> <C:
+\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440
+.pk><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on licenta.pdf (41 pages, 460017 bytes).
 PDF statistics:
- 997 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 500000)
- 463 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1229 PDF objects out of 1440 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 474 words of extra memory for PDF output out of 10000 (max. 10000000)
 

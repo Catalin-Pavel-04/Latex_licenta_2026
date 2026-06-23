@@ -21,6 +21,23 @@
 \usepackage{hyperref}
 \setlength{\emergencystretch}{3em}
 
+\newcommand{\placeholderfigure}[3]{%
+\begin{figure}[H]
+\centering
+\fbox{%
+\begin{minipage}{0.9\textwidth}
+\centering
+\vspace{0.35cm}
+\textbf{#1}\par
+\vspace{0.25cm}
+\small #2\par
+\vspace{0.35cm}
+\end{minipage}%
+}
+\caption{#3}
+\end{figure}
+}
+
 \newtheorem{thm}{Teorema}[section]
 \newtheorem{lem}[thm]{Lema}
 \newtheorem{cor}[thm]{Corolarul}
@@ -151,6 +168,11 @@ Digitalizarea serviciilor universitare a schimbat modul în care studenții inte
 
 Lucrarea pornește de la această observație și propune un asistent integrat în browser, capabil să răspundă la întrebări formulate natural și să indice sursele oficiale folosite. Integrarea sub forma unei extensii Chrome este importantă deoarece păstrează asistentul în același context în care apare nevoia de informare. Studentul nu este obligat să deschidă o aplicație separată, ci poate interoga sistemul direct din browser.
 
+\placeholderfigure
+{Captură ecosistem web UVT}
+{Se va insera o captură cu site-ul oficial UVT sau cu o pagină de facultate, evidențiind distribuirea informației pe meniuri, anunțuri și pagini administrative. Imaginea trebuie să ilustreze problema de navigare pe care o rezolvă extensia UVT Asist.}
+{Exemplu de context web UVT în care utilizatorul poate avea nevoie de asistență pentru navigare}
+
 \section{Motivație}
 Asistenții conversaționali bazați pe modele de limbaj au devenit o soluție atractivă pentru interacțiunea în limbaj natural. Totuși, într-un context instituțional, un răspuns fluent nu este suficient. Studentul are nevoie de informații verificabile, iar sistemul trebuie să evite răspunsurile speculative. În domenii precum bursele, admiterea, regulamentele sau procedurile administrative, o formulare aproximativă poate produce confuzie.
 
@@ -177,12 +199,6 @@ La nivel tehnic, proiectul propune un pipeline complet: descoperirea paginilor, 
 
 \section{Structura lucrării}
 Capitolul al doilea prezintă fundamentele teoretice relevante: regăsirea informației, modelele de limbaj, embeddings-urile, căutarea vectorială și paradigma Retrieval-Augmented Generation. Capitolul al treilea analizează problema concretă din ecosistemul UVT și formulează cerințele sistemului. Capitolul al patrulea descrie arhitectura aplicației, iar capitolul al cincilea detaliază componentele implementate. Capitolul al șaselea discută validarea, limitele și riscurile soluției. Ultimele capitole prezintă concluziile și activitatea desfășurată.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{imagini/site_uvt.png}
-    \caption{Exemplu de context web în care utilizatorul poate avea nevoie de asistență pentru navigare}
-\end{figure}
 
 \chapter{Fundamente teoretice}
 
@@ -314,31 +330,10 @@ Pentru ca prototipul să fie considerat funcțional, au fost stabilite câteva c
 \section{Viziune generală}
 UVT Asist este construit ca sistem local, compus dintr-o extensie Chrome, un backend Flask, un index JSON, o bază vectorială Qdrant și modele Ollama pentru embeddings și generare. Produsul vizibil pentru utilizator este extensia, iar restul componentelor rulează local și susțin procesarea întrebării.
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[
-    node distance=1.6cm,
-    component/.style={draw, rounded corners, align=center, minimum width=3.4cm, minimum height=1cm},
-    data/.style={draw, rounded corners, align=center, minimum width=3.2cm, minimum height=0.9cm, fill=gray!10},
-    arrow/.style={->, thick}
-]
-\node[component] (extension) {Extensie Chrome\\popup utilizator};
-\node[component, right=of extension] (backend) {Backend Flask\\orchestrare chat};
-\node[data, above right=of backend] (json) {Index JSON\\fragmente oficiale};
-\node[data, right=of backend] (qdrant) {Qdrant\\căutare vectorială};
-\node[component, below right=of backend] (ollama) {Ollama\\embeddings + generare};
-\node[data, above=of json] (sources) {Site-uri oficiale\\UVT și facultăți};
-
-\draw[arrow] (extension) -- node[above]{\small întrebare} (backend);
-\draw[arrow] (backend) -- node[left]{\small indexare} (json);
-\draw[arrow] (backend) -- node[above]{\small search} (qdrant);
-\draw[arrow] (backend) -- node[right]{\small prompt} (ollama);
-\draw[arrow] (sources) -- (json);
-\draw[arrow] (json) -- (qdrant);
-\draw[arrow] (backend) -- node[below]{\small răspuns + surse} (extension);
-\end{tikzpicture}
-\caption{Arhitectura logică a sistemului UVT Asist}
-\end{figure}
+\placeholderfigure
+{Diagramă arhitectură finală UVT Asist}
+{Se va insera o diagramă cu extensia Chrome, backend-ul Flask modularizat, rutele din \texttt{backend/api/}, serviciile din \texttt{backend/services/}, componentele RAG din \texttt{backend/rag/}, Qdrant, Ollama, indexul JSON și sursele oficiale UVT. Diagrama trebuie să indice fluxurile principale: întrebare, retrieval, reranking, generare și răspuns cu surse.}
+{Arhitectura finală a sistemului UVT Asist}
 
 Separarea componentelor reduce complexitatea interfeței și permite dezvoltarea independentă a fiecărui nivel. Extensia nu trebuie să cunoască detaliile indexului sau ale modelului de limbaj. Backend-ul nu depinde de browser pentru logica de retrieval. Qdrant poate fi înlocuit sau reconstruit fără modificarea popup-ului, iar modelul Ollama poate fi schimbat prin configurare.
 
@@ -389,6 +384,11 @@ Fiecare fragment primește metadate: identificator, facultate, tip de pagină, t
 
 La nivel operațional, indexarea poate rula manual sau la pornirea backend-ului. Pentru demonstrații, reconstrucția completă a indexului poate fi pornită înaintea prezentării, iar extensia afișează progresul. Această funcționalitate este utilă deoarece un index incomplet poate induce răspunsuri greșite. În timpul indexării, endpoint-ul de chat este blocat controlat și returnează un mesaj temporar, în loc să răspundă dintr-o stare parțială.
 
+\placeholderfigure
+{Diagramă pipeline indexare}
+{Se va insera o diagramă cu pașii de indexare: configurarea surselor oficiale, descoperirea URL-urilor, filtrarea domeniilor, descărcarea HTML/PDF/DOCX, extragerea textului, OCR opțional, clasificarea paginilor, segmentarea în fragmente, salvarea indexului JSON, generarea embeddings-urilor Ollama și încărcarea în Qdrant.}
+{Pipeline-ul de indexare al surselor oficiale}
+
 \section{Fluxul de interogare}
 La primirea unei întrebări, backend-ul normalizează textul, aplică reguli pentru corectarea unor greșeli frecvente și detectează intenția. Dacă utilizatorul a selectat o facultate, aceasta devine filtru principal. Dacă a selectat contextul general UVT, backend-ul poate încerca să deducă facultatea din întrebare sau din istoricul recent.
 
@@ -422,6 +422,11 @@ După recuperare, candidații sunt reordonați determinist. Scorul final combin�
 \end{algorithmic}
 \end{algorithm}
 
+\placeholderfigure
+{Diagramă pipeline interogare}
+{Se va insera o diagramă pentru fluxul întrebare -- analiză -- retrieval -- reranking -- răspuns: normalizare, detecție intenție, inferență facultate, embedding, căutare Qdrant, backfill lexical, scorare în \texttt{backend/rag/ranking/}, verificare live opțională, calcul confidence și generare sau răspuns determinist.}
+{Pipeline-ul de procesare a unei întrebări în UVT Asist}
+
 \section{Controlul generării}
 Generarea cu modelul de limbaj este folosită doar când există dovezi suficiente. Pentru întrebări de navigare, precum orar, contact sau admitere, sistemul poate construi răspunsul direct, fără LLM. Pentru întrebări cu încredere scăzută, backend-ul returnează un mesaj de limitare și sursele apropiate, evitând generarea unui text care ar putea părea mai sigur decât este.
 
@@ -433,29 +438,42 @@ Indexul local oferă viteză și stabilitate, dar paginile oficiale se pot schim
 \chapter{Componente și funcționalități}
 
 \section{Structura proiectului}
-Proiectul este organizat în două zone principale: \texttt{backend/} și \texttt{extension/}. Directorul \texttt{backend/} conține serverul Flask, logica de indexare, retriever-ul, integrarea cu Ollama, integrarea cu Qdrant, extragerea textului din pagini și testele automate. Directorul \texttt{extension/} conține fișierul \texttt{manifest.json}, interfața popup-ului și logica JavaScript care comunică cu backend-ul local.
+Proiectul aplicației este organizat în două zone principale: \texttt{backend/} și \texttt{extension/}. În varianta curentă, backend-ul nu mai concentrează toată logica în fișierul Flask principal, ci separă rutele HTTP, serviciile aplicației, configurația, logica RAG și regulile de ranking. Această separare face mai clare responsabilitățile fiecărui modul și permite testarea mai precisă a componentelor critice.
 
-Această structură este potrivită pentru o aplicație de tip extensie browser cu servicii locale. Frontend-ul rămâne ușor de instalat în Chrome, iar backend-ul poate fi rulat și testat independent. În plus, există și o interfață HTML de test, folosită doar pentru dezvoltare, care permite apelarea endpoint-urilor fără încărcarea extensiei în browser.
+Extensia Chrome este structurată similar: comunicarea cu backend-ul, stocarea locală, starea conversației și randarea interfeței sunt mutate în module JavaScript dedicate. Popup-ul rămâne interfața principală pentru utilizator, iar pagina de opțiuni permite configurarea URL-ului backend-ului local fără modificarea codului.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{9.6cm}|}
+\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}X|}
 \hline
-\textbf{Componentă} & \textbf{Responsabilitate} \\
+\textbf{Componentă} & \textbf{Responsabilitate în structura curentă} \\
 \hline
-\texttt{app.py} & Expune API-ul Flask, orchestrează chat-ul, verifică starea componentelor și salvează feedback. \\
+\texttt{backend/app.py} & Punct de intrare Flask: definește \texttt{create\_app}, configurează CORS și înregistrează blueprint-urile API. \\
 \hline
-\texttt{build\_index.py} & Descoperă pagini oficiale, descarcă surse și construiește indexul local. \\
+\texttt{backend/api/} & Conține rute HTTP subțiri pentru chat, health, feedback, facultăți și indexare; rutele validează cererea și delegă logica către servicii. \\
 \hline
-\texttt{retriever.py} & Normalizează întrebarea, detectează intenții, caută în Qdrant și rerankează candidații. \\
+\texttt{backend/services/} & Grupează serviciile de chat, feedback, health, indexare, telemetry, cache și construire a răspunsului. \\
 \hline
-\texttt{page\_index.py} & Definește schema indexului, clasifică pagini și segmentează textul în fragmente. \\
+\texttt{backend/core/} & Centralizează configurația aplicației și inițializarea logging-ului. \\
 \hline
-\texttt{vector\_store.py} & Inițializează Qdrant, creează indexuri de payload și execută căutări vectoriale. \\
+\texttt{backend/rag/} & Conține analiza întrebării, normalizarea textului, detecția intenției, serviciul de retrieval și calculul nivelului de încredere. \\
 \hline
-\texttt{popup.js} & Gestionează conversația, stările UI, istoricul, feedback-ul și apelurile către backend. \\
+\texttt{backend/rag/ranking/} & Separă scorarea lexicală, scorarea după facultate, scorarea după tipul paginii și scorarea pentru întrebări de politici sau regulamente. \\
 \hline
-\end{tabular}
+\texttt{backend/tests/} & Conține teste unitare și de integrare pentru API, retriever, confidence, query analysis, caching și cazuri defensive. \\
+\hline
+\texttt{extension/js/api.js} & Gestionează comunicarea HTTP cu backend-ul local. \\
+\hline
+\texttt{extension/js/storage.js} & Gestionează \texttt{chrome.storage}, URL-ul backend-ului, istoricul conversației și întrebările recente. \\
+\hline
+\texttt{extension/js/state.js} & Păstrează starea conversației, facultatea selectată și tranzițiile UI relevante. \\
+\hline
+\texttt{extension/js/render.js} & Randează mesajele, sursele, nivelul de încredere, stările de eroare și indicatorii vizuali. \\
+\hline
+\texttt{extension/options.html} și \newline \texttt{extension/options.js} & Oferă interfața de configurare pentru URL-ul backend-ului local. \\
+\hline
+\end{tabularx}
 \caption{Structura principală a proiectului UVT Asist}
 \end{table}
 
@@ -465,6 +483,11 @@ Extensia Chrome este interfața principală a aplicației. Ea oferă un popup cu
 Din punct de vedere al produsului, această interfață este potrivită pentru scenariul de utilizare. Studentul poate întreba rapid fără a naviga manual prin mai multe meniuri. Din punct de vedere tehnic, extensia trimite cereri HTTP către backend-ul local, citește endpoint-ul \texttt{/health}, încarcă lista de facultăți din \texttt{/faculties} și trimite întrebările la \texttt{/chat}.
 
 Popup-ul nu încearcă să ascundă starea tehnică a sistemului. Dacă backend-ul este disponibil și indexul este pregătit, utilizatorul vede o stare de sistem pregătit. Dacă indexarea rulează, interfața afișează progresul. Dacă backend-ul nu răspunde, butoanele rămân controlate, iar mesajul indică faptul că serviciul local trebuie pornit. Această vizibilitate este importantă deoarece prototipul depinde de mai multe procese locale.
+
+\placeholderfigure
+{Captură popup extensie Chrome}
+{Se va insera o captură cu popup-ul extensiei în stare normală: selectorul de facultate, câmpul de întrebare, starea backend-ului, istoricul conversației și zona de afișare a surselor. Captura trebuie făcută cu backend-ul local disponibil și indexul pregătit.}
+{Popup-ul extensiei UVT Asist în stare normală}
 
 \section{Backend-ul Flask}
 Backend-ul Flask este componenta de orchestrare. Flask este un framework web Python minimalist, potrivit pentru prototipuri și servicii API locale \cite{FlaskDocs}. În proiect, backend-ul expune endpoint-uri pentru stare, listă de facultăți, status de indexare, chat și feedback.
@@ -531,6 +554,11 @@ Răspunsul trimis către extensie conține textul final, lista surselor, faculta
 
 Feedback-ul utilizatorului este salvat împreună cu întrebarea, răspunsul, sursele, scorul de încredere și modul de generare. Într-o etapă ulterioară, aceste date pot fi folosite pentru identificarea întrebărilor problematice, a surselor slab indexate sau a cazurilor în care reranking-ul trebuie ajustat.
 
+\placeholderfigure
+{Captură răspuns cu surse și confidence}
+{Se va insera o captură cu un răspuns complet în popup: textul răspunsului, lista de surse oficiale, nivelul de încredere și badge-ul de proveniență a dovezilor, de exemplu \textit{Index local} sau \textit{Verificat live}. Captura trebuie să arate că utilizatorul poate verifica sursele afișate.}
+{Afișarea răspunsului, surselor oficiale și nivelului de încredere}
+
 \chapter{Validare, limite și direcții viitoare}
 
 \section{Strategia de validare}
@@ -554,6 +582,52 @@ O altă categorie de teste verifică indexul. Aceste teste validează normalizar
 Testele backend verifică robustețea API-ului. Un payload JSON greșit nu trebuie să producă o eroare 500. O întrebare cu dovezi slabe nu trebuie să invoce modelul de limbaj. O întrebare de navigare cu rezultat sigur trebuie să primească răspuns determinist. De asemenea, când indexarea este în desfășurare, chat-ul trebuie să se oprească temporar și să returneze statusul de indexare.
 
 Această acoperire nu demonstrează că aplicația răspunde corect la orice întrebare, dar verifică proprietățile esențiale ale arhitecturii: sursele specifice sunt preferate, fallback-ul funcționează, generarea este controlată și stările de eșec sunt tratate explicit.
+
+\section{Evaluare cantitativă pe setul Q\&A de 100 de întrebări}
+Evaluarea cantitativă a fost realizată pe setul Q\&A de 100 de întrebări definit în proiect. Fiecare întrebare a fost trimisă către endpoint-ul de chat, iar evaluatorul a verificat scorul Q\&A, sursele returnate, potrivirea nivelului de încredere, comportamentul pentru întrebări fără răspuns sigur și latența. Raportarea compară rezultatele înainte și după optimizările aplicate asupra selecției surselor, reranking-ului, tratării întrebărilor vagi și controlului generării.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedleft\arraybackslash}p{2.25cm}|>{\raggedleft\arraybackslash}p{2.25cm}|>{\raggedleft\arraybackslash}p{2.35cm}|}
+\hline
+\textbf{Indicator} & \textbf{Înainte} & \textbf{După} & \textbf{Diferență} \\
+\hline
+Întrebări evaluate & 100 & 100 & 0 \\
+\hline
+Pass rate & 65\% & 100\% & +35 pp \\
+\hline
+Scor mediu Q\&A & 69.54 & 85.84 & +16.30 \\
+\hline
+Scor median Q\&A & 82.0 & 85.0 & +3.0 \\
+\hline
+Top-1 URL corect & 98/100 & 100/100 & +2 \\
+\hline
+Top-3 URL corect & 98/100 & 100/100 & +2 \\
+\hline
+Potrivire nivel de încredere & 83/100 & 99/100 & +16 \\
+\hline
+Întrebări fără răspuns sigur tratate corect & 1/10 & 10/10 & +9 \\
+\hline
+Latență medie & 27.182 s & 13.679 s & -13.503 s \\
+\hline
+Latență mediană & 37.689 s & 4.342 s & -33.347 s \\
+\hline
+\end{tabularx}
+\caption{Rezultate comparative pe setul Q\&A de 100 de întrebări}
+\end{table}
+
+\placeholderfigure
+{Grafic rezultate înainte vs. după optimizări}
+{Se va insera un grafic sau un tabel vizual care compară indicatorii principali înainte și după optimizări: pass rate, scor mediu Q\&A, scor median, Top-1 URL corect, Top-3 URL corect, potrivirea nivelului de încredere, tratarea întrebărilor fără răspuns sigur și latența. Valorile trebuie să fie cele din Tabelul anterior.}
+{Rezultatele evaluării înainte și după optimizări}
+
+Rezultatele indică o îmbunătățire consistentă pe setul definit de întrebări, în special pentru întrebările fără răspuns sigur și pentru potrivirea nivelului de încredere. Creșterea Top-1 și Top-3 URL la 100/100 arată că, în acest set, sursele oficiale așteptate au fost plasate corect în lista de rezultate. Totuși, aceste rezultate nu reprezintă o garanție generală pentru orice întrebare posibilă. Ele descriu comportamentul sistemului pe datasetul versionat în proiect, cu indexul, configurația și serviciile locale folosite la momentul evaluării.
+
+\section{Interpretarea latenței}
+Latența medie și latența mediană descriu aspecte diferite ale comportamentului sistemului. Media este sensibilă la câteva cazuri lente, în timp ce mediana descrie mai bine timpul tipic observat pentru o întrebare obișnuită din setul evaluat. Scăderea medianei de la 37.689 s la 4.342 s indică faptul că multe întrebări au devenit mai rapide după optimizări, chiar dacă unele cazuri rămân costisitoare.
+
+Întrebările pot deveni lente atunci când activează pași suplimentari: verificarea live a surselor, extragerea sau consultarea unor documente PDF, calculul embeddings-urilor locale, interogarea Qdrant sau generarea răspunsului cu Ollama. În plus, întrebările vagi sau cele care ating mai multe categorii pot necesita căutări mai largi și reranking suplimentar. Din acest motiv, latența trebuie interpretată împreună cu tipul întrebării și cu modul de generare folosit, nu ca o valoare fixă universală.
 
 \section{Evaluarea scenariilor manuale}
 Evaluarea manuală urmărește comportamentul perceput de utilizator. Pentru fiecare scenariu, se verifică trei aspecte: sursa de top, calitatea răspunsului și metadatele afișate. Sursa de top trebuie să fie oficială și potrivită. Răspunsul trebuie să fie scurt și să nu adauge informații nesusținute. Metadatele trebuie să indice facultatea potrivită, nivelul de încredere și modul de retrieval.
@@ -623,15 +697,16 @@ Activitatea de realizare a lucrării a fost organizată în etape succesive:
 
 \chapter{Utilizarea instrumentelor de inteligență artificială generativă}
 \label{genAIUsage}
-În această anexă este prezentată o sinteză a modului în care au fost utilizate instrumentele de inteligență artificială generativă în cadrul lucrării. O imagine de ansamblu este oferită în Tabelul \ref{tab:genAIOverview}.
+În această anexă este prezentată o sinteză a modului în care au fost utilizate instrumentele de inteligență artificială generativă în cadrul lucrării și al proiectului software asociat. Instrumentele AI au fost folosite ca sprijin auxiliar pentru organizare, verificări de coerență și sugestii tehnice. Codul, structura finală, interpretarea rezultatelor și textul final au fost revizuite și asumate de autor.
 
 \begin{table}[h!]
     \centering
+    \small
     \begin{tabularx}{\textwidth}{|l|X|X|X|}
         \hline \rowcolor{blue!20}
-        Instrument AI & Scopul utilizării & Secțiuni în care a fost utilizat & Observații \\
+        Instrument AI & Scopul utilizării & Zone în care a fost utilizat & Observații \\
         \hline
-        OpenAI Codex / ChatGPT & Sprijin pentru alinierea structurii LaTeX la template-ul facultății și pentru verificarea compilării & Copertă, declarație de integritate științifică, bibliografie și anexe & Rezultatul a fost verificat prin compilare locală; instrumentul nu este tratat ca sursă bibliografică. \\
+        OpenAI Codex / ChatGPT & Sprijin pentru organizarea textului, sugestii de refactorizare, formulări de documentație și verificări de coerență & Lucrarea LaTeX, documentația proiectului și unele decizii de structurare a codului & Instrumentul nu este tratat ca sursă bibliografică și nu este autor al lucrării; rezultatele au fost revizuite de autor. \\
         \hline
     \end{tabularx}
     \caption{Sinteza utilizării instrumentelor de inteligență artificială generativă}
@@ -640,6 +715,8 @@ Activitatea de realizare a lucrării a fost organizată în etape succesive:
 
 \section{Detalii privind utilizarea OpenAI Codex / ChatGPT}
 \label{sectionChatGPT}
-Instrumentul a fost utilizat pentru reorganizarea documentului LaTeX conform template-ului oficial, fără introducerea unor surse bibliografice noi și fără modificarea argumentației tehnice a lucrării. Verificarea rezultatului s-a făcut prin inspectarea diferențelor și prin compilarea documentului.
+Instrumentul a fost utilizat pentru sprijin punctual în organizarea materialului, pentru reformulări de documentație și pentru verificarea coerenței dintre textul lucrării și structura curentă a aplicației. În zona de cod, sugestiile au vizat în principal refactorizarea și separarea responsabilităților, nu înlocuirea procesului de proiectare sau validare.
+
+Autorul a verificat manual modificările, a păstrat controlul asupra conținutului final și a interpretat rezultatele evaluării pe baza rapoartelor existente în proiect. Afirmațiile cantitative din lucrare provin din seturile de evaluare definite în repository, nu din estimări generate de AI.
 
 \end{document}
