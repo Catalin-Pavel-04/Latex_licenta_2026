@@ -1,11 +1,29 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{VSP{\etalchar{+}}17}
+\begin{thebibliography}{GXG{\etalchar{+}}23}
 
 \bibitem[{Goo}]{ChromeMV3}
 {Google Chrome Developers}.
 \newblock Chrome extensions: Manifest v3 documentation.
 \newblock \url{https://developer.chrome.com/docs/extensions/}.
 \newblock Accesat: 26 mai 2026.
+
+\bibitem[GXG{\etalchar{+}}23]{Gao2023RAGSurvey}
+Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yi~Dai,
+  Jiawei Sun, Meng Wang, and Haofen Wang.
+\newblock Retrieval-augmented generation for large language models: A survey.
+\newblock {\em arXiv preprint arXiv:2312.10997}, 2023.
+
+\bibitem[GYZ{\etalchar{+}}25]{Gan2025RAGEvalSurvey}
+Aoran Gan, Hao Yu, Kai Zhang, Qi~Liu, Wenyu Yan, Zhenya Huang, Shiwei Tong, and
+  Guoping Hu.
+\newblock Retrieval augmented generation evaluation in the era of large
+  language models: A comprehensive survey.
+\newblock {\em arXiv preprint arXiv:2504.14891}, 2025.
+
+\bibitem[JDJ17]{Johnson2017Billion}
+Jeff Johnson, Matthijs Douze, and Herv{\'e} J{\'e}gou.
+\newblock Billion-scale similarity search with gpus.
+\newblock {\em arXiv preprint arXiv:1702.08734}, 2017.
 
 \bibitem[LPP{\etalchar{+}}20]{Lewis2020RAG}
 Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
@@ -37,6 +55,13 @@ Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Schutze.
 \newblock Qdrant documentation.
 \newblock \url{https://qdrant.tech/documentation/}.
 \newblock Accesat: 26 mai 2026.
+
+\bibitem[RG19]{Reimers2019SBERT}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-bert: Sentence embeddings using siamese bert-networks.
+\newblock In {\em Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing}, pages 3982--3992, 2019.
 
 \bibitem[RZ09]{Robertson2009BM25}
 Stephen Robertson and Hugo Zaragoza.

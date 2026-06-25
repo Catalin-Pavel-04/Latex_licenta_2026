@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  23 JUN 2026 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  25 JUN 2026 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,7 +907,7 @@ Package hyperref Info: Link coloring OFF on input line 69.
 \@outlinefile=\write4
 \openout4 = `licenta.out'.
 
-<FI.png, id=234, 578.8827pt x 290.0436pt>
+<FI.png, id=134, 578.8827pt x 290.0436pt>
 File: FI.png Graphic file (type png)
 <use FI.png>
 Package pdftex.def Info: FI.png  used on input line 77.
@@ -947,181 +947,193 @@ Underfull \hbox (badness 5203) in paragraph at lines 165--166
 Capitolul 2.
 [11
 
-] [12] [13] [14]
-Underfull \hbox (badness 2452) in paragraph at lines 266--267
-[]\T1/cmr/m/n/12 UVT Asist aplic  prin-ci-piul de-gra-d -rii con-tro-late. Dac 
- Qdrant sau
+]
+Underfull \hbox (badness 1102) in paragraph at lines 230--231
+[]\T1/cmr/m/n/12 Un flux RAG ti-pic con[]ine co-lec-ta-rea do-cu-men-te-lor, se
+g-men-ta-rea lor în
  []
 
-[15]
+
+Underfull \hbox (badness 1735) in paragraph at lines 230--231
+\T1/cmr/m/n/12 frag-mente, in-de-xa-rea embeddings-urilor, in-ter-pre-ta-rea în
+-tre-b -rii, re-cu-pe-ra-rea
+ []
+
+[12] [13] [14]
 Capitolul 3.
-[16
+[15
 
 ]
-Underfull \hbox (badness 1448) in paragraph at lines 291--292
-\T1/cmr/m/n/12 Pe lâng  func[]ionalit []i, pro-iec-tul im-pune cerin[]e nefunc[
-]ionale im-por-tante.
+Underfull \hbox (badness 1168) in paragraph at lines 257--258
+[]\T1/cmr/m/n/12 backend-ul tri-mite în-tre-ba-rea c -tre Ol-lama pen-tru in-te
+r-pre-tare ling-vis-
  []
 
-[17] [18] [19]
+[16] [17]
 Capitolul 4.
-[20
+[18
 
-] [21] [22]
+] [19] [20]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 400.
- [23] [24]
+put line 373.
+ [21] [22] [23]
 Capitolul 5.
-[25
+[24
 
-] [26] [27] [28] [29] [30]
+]
+Underfull \hbox (badness 1565) in paragraph at lines 455--456
+[]\T1/cmr/m/n/12 Configurarea aplica[]iei []i logging-ul sunt cen-tra-li-zate î
+n \T1/cmtt/m/n/12 backend/core/\T1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 455--456
+\T1/cmr/m/n/12 Ser-vi-ci-ile de chat, fe-e-d-back, health, in-de-xare []i te-le
+-me-try sunt gru-pate în
+ []
+
+[25] [26]
 Capitolul 6.
+[27
+
+] [28] [29] [30]
+Capitolul 7.
 [31
 
-] [32] [33] [34]
-Underfull \hbox (badness 1286) in paragraph at lines 661--662
-\T1/cmr/m/n/12 Acest lu-cru este un avan-taj pen-tru confiden[]ialitate, dar nu
- eli-min  toate
- []
-
-[35] [36]
-Capitolul 7.
-[37
-
-] (licenta.bbl
-Underfull \hbox (badness 2057) in paragraph at lines 24--28
+] [32] (licenta.bbl
+Underfull \hbox (badness 1515) in paragraph at lines 42--46
 []\T1/cmr/m/n/12 Ollama.  Ol-lama do-cu-men-ta-tion.  []$\T1/cmtt/m/n/12 https 
 : / / github . com / ollama /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--34
+Underfull \hbox (badness 10000) in paragraph at lines 48--52
 []\T1/cmr/m/n/12 Pallets Pro-jects.  Flask do-cu-men-ta-tion.  []$\T1/cmtt/m/n/
 12 https : / / flask .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 []\T1/cmr/m/n/12 Qdrant.  Qdrant do-cu-men-ta-tion.  []$\T1/cmtt/m/n/12 https :
  / / qdrant . tech /
  []
 
-) [38
+[33
 
 
-]
+]) [34]
 Anexa A.
-[39
+[35
 
 ]
 Anexa B.
 
-Underfull \hbox (badness 1365) in paragraph at lines 711--711
+Underfull \hbox (badness 1365) in paragraph at lines 592--592
 []|\T1/cmr/m/n/10.95 Zone în care a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 []|\T1/cmr/m/n/10.95 Sprijin pen-tru
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 711--711
+Underfull \hbox (badness 1275) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 or-ga-ni-za-rea tex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 tu-lui, su-ges-tii
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 711--711
+Underfull \hbox (badness 1270) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 de re-fac-to-ri-zare,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 for-mu-l ri de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 documenta[]ie
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 711--711
+Underfull \hbox (badness 5924) in paragraph at lines 592--592
 []\T1/cmr/m/n/10.95 i ve-ri-fi-c ri de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 documenta[]ia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 pro-iec-tu-lui []i
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 711--711
+Underfull \hbox (badness 1137) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 unele de-ci-zii de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 struc-tu-rare a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 este tra-tat ca
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 711--711
+Underfull \hbox (badness 6893) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 surs  bi-bli-o-gra-
  []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 711--711
+Underfull \hbox (badness 2635) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 fic  []i nu este
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--711
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
 \T1/cmr/m/n/10.95 re-zul-ta-tele au
  []
 
-[40
+[36
 
-] [41] (licenta.aux)
+] [37] (licenta.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `licenta.out' has not changed.
-(rerunfilecheck)             Checksum: A274DA89918398AFA84833D5BD80F503;10573.
+(rerunfilecheck)             Checksum: 65CDEE0C4588E19BB43BBB30893398D6;7562.
  ) 
 Here is how much of TeX's memory you used:
- 25257 strings out of 467871
- 457881 string characters out of 5417408
- 871459 words of memory out of 5000000
- 53563 multiletter control sequences out of 15000+600000
+ 25202 strings out of 467871
+ 457289 string characters out of 5417408
+ 871649 words of memory out of 5000000
+ 53538 multiletter control sequences out of 15000+600000
  656805 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,94p,632b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,94p,831b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-ti1200.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecbx1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecti1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts
+bx1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecti1095.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecrm0500.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts
 /pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Catalin\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Catalin\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Catalin\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Ca
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Catalin\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Catalin\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Ca
 talin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\
 Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.
 pk> <C:\Users\Catalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
@@ -1140,9 +1152,9 @@ atalin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0700.pk> <C:
 ic/amsfonts/cm/cmr12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on licenta.pdf (41 pages, 460017 bytes).
+Output written on licenta.pdf (37 pages, 438388 bytes).
 PDF statistics:
- 1229 PDF objects out of 1440 (max. 8388607)
- 132 named destinations out of 1000 (max. 500000)
- 474 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1108 PDF objects out of 1200 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
