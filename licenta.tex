@@ -479,8 +479,8 @@ Testele backend verifică robustețea API-ului. Un payload JSON greșit nu trebu
 
 Scenariile manuale verifică situații reprezentative pentru studenți: întrebarea despre orar trebuie să favorizeze pagina oficială de orare, întrebarea despre secretariat trebuie să favorizeze pagina de contact, întrebările despre cumularea burselor trebuie să favorizeze metodologii sau regulamente oficiale, iar oprirea backend-ului trebuie să fie afișată clar în extensie. Evaluarea manuală urmărește sursa de top, calitatea răspunsului și metadatele afișate.
 
-\section{Evaluare cantitativă și interpretarea latenței}
-Evaluarea cantitativă a fost realizată pe setul Q\&A de 100 de întrebări definit în proiect. Fiecare întrebare a fost trimisă către endpoint-ul de chat, iar evaluatorul a verificat scorul Q\&A, sursele returnate, potrivirea nivelului de încredere, comportamentul pentru întrebări fără răspuns sigur și latența. Raportarea compară rezultatele înainte și după optimizările aplicate asupra selecției surselor, reranking-ului, tratării întrebărilor vagi și controlului generării.
+\section{Evaluare independentă pe 1000 de întrebări}
+Înaintea benchmark-ului extins, proiectul a fost evaluat pe setul Q\&A de 100 de întrebări definit intern. Fiecare întrebare a fost trimisă către endpoint-ul de chat, iar evaluatorul a verificat scorul Q\&A, sursele returnate, potrivirea nivelului de încredere, comportamentul pentru întrebări fără răspuns sigur și latența. Raportarea compară rezultatele înainte și după optimizările aplicate asupra selecției surselor, reranking-ului, tratării întrebărilor vagi și controlului generării.
 
 \begin{table}[H]
 \centering
@@ -524,7 +524,94 @@ Rezultatele indică o îmbunătățire consistentă pe setul definit de întreb�
 
 Îmbunătățirile provin din trei direcții principale: selecția mai deterministă a surselor oficiale, refuzul sau clarificarea în cazurile nesigure și optimizările care reduc latența pentru întrebările frecvente. Latența medie și latența mediană descriu aspecte diferite ale comportamentului sistemului. Media este sensibilă la câteva cazuri lente, în timp ce mediana descrie mai bine timpul tipic observat pentru o întrebare obișnuită din setul evaluat.
 
-Întrebările pot deveni lente atunci când activează pași suplimentari: interpretarea lingvistică prin Ollama, verificarea live a surselor, extragerea sau consultarea unor documente PDF, calculul embeddings-urilor locale, interogarea Qdrant sau generarea răspunsului cu Ollama. În plus, întrebările vagi sau cele care ating mai multe categorii pot necesita căutări mai largi și reranking suplimentar. Din acest motiv, latența trebuie interpretată împreună cu tipul întrebării și cu modul de generare folosit, nu ca o valoare fixă universală.
+Pentru o verificare mai largă, aplicația a fost evaluată ulterior pe un benchmark independent de 1000 de întrebări. În această evaluare, \texttt{ideal\_answer} este folosit ca rubrică de evaluare, nu ca text care trebuie reprodus exact. Evaluatorul automat analizează răspunsul și metadatele returnate de sistem: sursele, intenția, \texttt{page\_type}, nivelul de încredere, termenii obligatorii din \texttt{required\_terms} și termenii interziși din \texttt{forbidden\_terms}. Întrebările fără răspuns sigur sunt evaluate separat, deoarece un comportament corect poate însemna refuzul de a formula o afirmație factuală nesusținută.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedleft\arraybackslash}p{4cm}|}
+\hline
+\textbf{Indicator global} & \textbf{Valoare} \\
+\hline
+Total întrebări & 1000 \\
+\hline
+Răspunsuri trecute & 644 \\
+\hline
+Răspunsuri eșuate & 356 \\
+\hline
+Rata de trecere & 64.4\% \\
+\hline
+Scor mediu & 72.34 \\
+\hline
+Scor median & 82.35 \\
+\hline
+Top-1 URL match & 439/694 = 63.26\% \\
+\hline
+Top-3 URL match & 502/694 = 72.33\% \\
+\hline
+Potrivire nivel de încredere & 843/1000 = 84.30\% \\
+\hline
+Erori tehnice & 0 \\
+\hline
+\end{tabularx}
+\caption{Rezultate globale pe benchmark-ul independent de 1000 de întrebări}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedleft\arraybackslash}p{3cm}|}
+\hline
+\textbf{Categorie} & \textbf{Rată de trecere} \\
+\hline
+\texttt{admitere} & 80.0\% \\
+\hline
+\texttt{burse} & 65.0\% \\
+\hline
+\texttt{calendar\_academic} & 39.0\% \\
+\hline
+\texttt{cazare\_camine} & 87.0\% \\
+\hline
+\texttt{contact\_secretariat} & 92.0\% \\
+\hline
+\texttt{intrebari\_fara\_raspuns\_sigur} & 43.0\% \\
+\hline
+\texttt{intrebari\_vagi\_ambigue} & 16.0\% \\
+\hline
+\texttt{orar} & 68.0\% \\
+\hline
+\texttt{regulamente\_metodologii} & 59.0\% \\
+\hline
+\texttt{voluntariat\_credite} & 95.0\% \\
+\hline
+\end{tabularx}
+\caption{Rezultate pe categorii în benchmark-ul independent}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{0.8\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedleft\arraybackslash}p{3cm}|}
+\hline
+\textbf{Indicator de latență} & \textbf{Valoare} \\
+\hline
+Latență medie & 23.323 s \\
+\hline
+Latență mediană & 24.335 s \\
+\hline
+P90 & 39.986 s \\
+\hline
+P95 & 51.269 s \\
+\hline
+\end{tabularx}
+\caption{Latența observată în benchmark-ul independent}
+\end{table}
+
+Aplicația a generat răspuns pentru toate cele 1000 de întrebări și nu au existat erori tehnice raportate. Rezultatele sunt însă neuniforme pe categorii. Categoriile forte sunt \texttt{voluntariat\_credite}, \texttt{contact\_secretariat}, \texttt{cazare\_camine} și \texttt{admitere}, unde informația este mai bine delimitată sau poate fi asociată mai clar cu surse oficiale. Categoriile slabe sunt \texttt{intrebari\_vagi\_ambigue}, \texttt{calendar\_academic} și \texttt{intrebari\_fara\_raspuns\_sigur}; aceste rezultate indică dificultăți în clarificarea întrebărilor incomplete, în identificarea calendarului potrivit și în refuzarea sigură a întrebărilor pentru care nu există dovezi suficiente.
+
+Latența arată limitele rulării locale. Întrebările pot deveni lente atunci când activează pași suplimentari: interpretarea lingvistică prin Ollama, verificarea live a surselor, extragerea sau consultarea unor documente PDF, calculul embeddings-urilor locale, interogarea Qdrant sau generarea răspunsului cu Ollama. Valorile P90 și P95 arată că o parte dintre întrebări depășesc semnificativ latența mediană, ceea ce este relevant pentru experiența utilizatorului.
+
+Rezultatele trebuie interpretate prudent. Ele sunt valabile pentru setul definit de 1000 de întrebări și pentru configurația locală folosită la momentul evaluării. Nu reprezintă o garanție universală pentru orice întrebare posibilă, iar evaluatorul automat nu înlocuiește evaluarea umană. Rolul lui este să ofere o măsurare repetabilă și mai largă decât scenariile manuale, nu să epuizeze analiza calității răspunsurilor.
 
 \section{Limite, amenințări la validitate, securitate și confidențialitate}
 Sistemul depinde de calitatea indexului local. Dacă o pagină oficială lipsește din index sau dacă textul nu poate fi extras corect, răspunsul poate fi incomplet. Documentele PDF scanate pot necesita OCR, iar calitatea OCR-ului poate varia. De asemenea, dacă o pagină se modifică după indexare, sistemul poate folosi informații depășite până la reconstrucția indexului, cu excepția surselor reverificate live.
@@ -544,7 +631,7 @@ Lucrarea a prezentat proiectarea unui asistent inteligent local pentru accesul l
 
 Din punct de vedere teoretic, soluția se bazează pe combinarea regăsirii informației cu modelele de limbaj. Căutarea semantică oferă flexibilitate, interpretarea lingvistică locală ajută la tratarea typo-urilor și a întrebărilor incomplete, iar regulile deterministe oferă control asupra selecției surselor. Prin afișarea surselor, scorului de încredere și stării de verificare, sistemul urmărește să rămână transparent și prudent.
 
-Prototipul demonstrează că o arhitectură RAG locală este fezabilă pentru un scenariu universitar. Totuși, calitatea finală depinde de acoperirea indexului, de actualizarea surselor și de evaluarea continuă pe întrebări reale. Rezultatele trebuie citite ca verificare pe setul de evaluare definit în proiect, nu ca garanție universală pentru orice întrebare posibilă.
+Prototipul demonstrează că o arhitectură RAG locală este fezabilă pentru un scenariu universitar. Totuși, calitatea finală depinde de acoperirea indexului, de actualizarea surselor și de evaluarea continuă pe întrebări reale. Rezultatele trebuie citite ca verificare pe seturile de evaluare definite în proiect, nu ca garanție universală pentru orice întrebare posibilă.
 
 \section{Contribuții și rezultate obținute}
 Contribuția principală constă în construirea unei soluții aplicate pentru ecosistemul UVT, cu extensie Chrome, backend Flask modular, index local, Qdrant, Ollama pentru interpretare și generare controlată, plus mecanisme de reranking determinist. Structura actuală separă rutele HTTP, serviciile, configurația, analiza RAG și ranking-ul, ceea ce face aplicația mai ușor de testat și de extins.
@@ -553,8 +640,10 @@ La nivel funcțional, sistemul oferă selecția facultății, istoric conversaț
 
 Pe setul Q\&A de 100 de întrebări definit în proiect, rata de trecere a crescut de la 65\% la 100\%, scorul mediu Q\&A de la 69.54 la 85.84, iar scorul median de la 82.0 la 85.0. Top-1 URL corect și Top-3 URL corect au ajuns la 100/100, potrivirea nivelului de încredere la 99/100, iar întrebările fără răspuns sigur tratate corect de la 1/10 la 10/10. Latența medie a scăzut de la 27.182 s la 13.679 s, iar latența mediană de la 37.689 s la 4.342 s.
 
+Evaluarea independentă pe 1000 de întrebări a oferit o imagine mai strictă asupra comportamentului sistemului. Aplicația a generat răspuns pentru toate întrebările și nu a produs erori tehnice, însă rata de trecere a fost 64.4\%, cu scor mediu 72.34 și scor median 82.35. Rezultatele cele mai bune au fost în categoriile \texttt{voluntariat\_credite}, \texttt{contact\_secretariat}, \texttt{cazare\_camine} și \texttt{admitere}, iar rezultatele cele mai slabe în \texttt{intrebari\_vagi\_ambigue}, \texttt{calendar\_academic} și \texttt{intrebari\_fara\_raspuns\_sigur}. Aceste valori arată că sistemul este funcțional, dar încă sensibil la întrebări ambigue și la situații în care răspunsul sigur trebuie delimitat mai strict.
+
 \section{Direcții viitoare}
-Direcțiile de dezvoltare includ reindexare programată, monitorizarea modificărilor în sursele oficiale, extinderea setului de teste, evaluare cu studenți reali și îmbunătățirea OCR-ului pentru documente scanate. O altă direcție utilă este construirea unui set standard de întrebări și răspunsuri de referință, pentru a compara obiectiv variante diferite de interpretare lingvistică, embedding, reranking și modele generative.
+Direcțiile de dezvoltare includ reindexare programată, monitorizarea modificărilor în sursele oficiale, extinderea setului de teste, evaluare cu studenți reali și îmbunătățirea OCR-ului pentru documente scanate. Pe baza benchmark-ului independent, prioritățile tehnice sunt tratarea întrebărilor vagi, îmbunătățirea acoperirii pentru calendarul academic și refuzul mai precis al întrebărilor fără răspuns sigur. O altă direcție utilă este construirea unui set standard de întrebări și răspunsuri de referință, pentru a compara obiectiv variante diferite de interpretare lingvistică, embedding, reranking și modele generative.
 
 La nivel de interfață, extensia poate fi extinsă cu explicații mai clare pentru întrebările neacoperite, gruparea surselor pe categorii și sugestii de reformulare. La nivel de backend, ar fi utilă separarea mai explicită între răspunsuri de navigare, răspunsuri administrative și răspunsuri de regulament, astfel încât fiecare categorie să aibă reguli de verificare adaptate.
 
