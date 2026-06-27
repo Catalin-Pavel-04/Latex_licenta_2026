@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{GXG{\etalchar{+}}23}
+\begin{thebibliography}{KOM{\etalchar{+}}20}
 
 \bibitem[{Goo}]{ChromeMV3}
 {Google Chrome Developers}.
@@ -24,6 +24,13 @@ Aoran Gan, Hao Yu, Kai Zhang, Qi~Liu, Wenyu Yan, Zhenya Huang, Shiwei Tong, and
 Jeff Johnson, Matthijs Douze, and Herv{\'e} J{\'e}gou.
 \newblock Billion-scale similarity search with gpus.
 \newblock {\em arXiv preprint arXiv:1702.08734}, 2017.
+
+\bibitem[KOM{\etalchar{+}}20]{Karpukhin2020DPR}
+Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey
+  Edunov, Danqi Chen, and Wen-tau Yih.
+\newblock Dense passage retrieval for open-domain question answering.
+\newblock In {\em Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing}, pages 6769--6781, 2020.
 
 \bibitem[LPP{\etalchar{+}}20]{Lewis2020RAG}
 Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
