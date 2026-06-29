@@ -191,7 +191,7 @@ Figura \ref{fig:context-web-uvt} ilustrează un exemplu de context web în care 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{imagini/site_uvt.png}
-\caption{Exemplu de context web UVT în care utilizatorul poate avea nevoie de asistență pentru navigare}
+\caption{Exemplu de context web UVT în care utilizatorul poate avea nevoie de asistență pentru navigare. Sursă: captură realizată de autor de pe site-ul oficial al Universității de Vest din Timișoara}
 \label{fig:context-web-uvt}
 \end{figure}
 
@@ -227,11 +227,11 @@ Căutarea vectorială este utilă deoarece poate recupera documente relevante ch
 \section{Modele de limbaj și RAG}
 Modelele de limbaj moderne sunt construite pentru a prezice și genera text. Arhitectura Transformer a devenit baza multor modele actuale deoarece mecanismul de atenție permite modelarea eficientă a relațiilor dintre cuvinte pe distanțe mari \cite{Vaswani2017Attention}. Aceste modele pot produce răspunsuri fluente și pot înțelege într-o anumită măsură intenția utilizatorului, ceea ce le face utile pentru interfețe conversaționale.
 
-În același timp, un model de limbaj nu garantează corectitudinea factuală a răspunsului. Dacă este întrebat despre o regulă administrativă și nu primește context oficial, modelul poate genera un răspuns plauzibil, dar greșit sau depășit. Într-o aplicație universitară, riscul este semnificativ deoarece utilizatorul poate lua decizii pe baza răspunsului.
+În același timp, un model de limbaj nu garantează corectitudinea factuală a răspunsului. Dacă este întrebat despre o regulă administrativă și nu primește context oficial, modelul poate genera un răspuns plauzibil, dar greșit sau depășit, fenomen discutat în literatura despre hallucination în generarea de text \cite{Ji2023Hallucination}. Într-o aplicație universitară, riscul este semnificativ deoarece utilizatorul poate lua decizii pe baza răspunsului.
 
-Retrieval-Augmented Generation combină două etape: recuperarea documentelor relevante și generarea răspunsului pe baza acestora \cite{Lewis2020RAG}. În loc ca modelul să răspundă doar din parametrii săi interni, sistemul îi oferă un context explicit. Această abordare este potrivită pentru domenii în care informația se schimbă sau trebuie justificată prin surse. Survey-urile recente descriu evoluția RAG de la fluxuri simple către arhitecturi modulare, cu componente separate pentru retrieval, filtrare, generare și evaluare \cite{Gao2023RAGSurvey,Gan2025RAGEvalSurvey}.
+Retrieval-Augmented Generation combină două etape: recuperarea documentelor relevante și generarea răspunsului pe baza acestora \cite{Lewis2020RAG}. În loc ca modelul să răspundă doar din parametrii săi interni, sistemul îi oferă un context explicit. Această abordare este potrivită pentru domenii în care informația se schimbă sau trebuie justificată prin surse. Survey-urile recente descriu evoluția RAG de la fluxuri simple către arhitecturi modulare, cu componente separate pentru retrieval, filtrare, generare și evaluare \cite{Lewis2020RAG,Gao2023RAGSurvey}.
 
-În sistemele RAG, etapa de retrieval poate fi precedată de \textit{query understanding} sau \textit{query rewriting}. Această etapă încearcă să transforme o întrebare formulată natural într-o reprezentare mai utilă pentru căutare: o variantă corectată a întrebării, intenția probabilă, cuvinte-cheie și indicii de context, precum facultatea vizată. Rolul ei este să reducă efectul typo-urilor, al formulărilor incomplete și al sinonimelor, nu să stabilească adevărul factual al răspunsului. Survey-urile recente tratează această etapă ca parte a orchestration-ului RAG, alături de retrieval, filtrare, generare și evaluare \cite{Gao2023RAGSurvey,Gan2025RAGEvalSurvey}.
+În sistemele RAG, etapa de retrieval poate fi precedată de \textit{query understanding} sau \textit{query rewriting}. Această etapă încearcă să transforme o întrebare formulată natural într-o reprezentare mai utilă pentru căutare: o variantă corectată a întrebării, intenția probabilă, cuvinte-cheie și indicii de context, precum facultatea vizată. Rolul ei este să reducă efectul typo-urilor, al formulărilor incomplete și al sinonimelor, nu să stabilească adevărul factual al răspunsului. Survey-urile recente tratează această etapă ca parte a orchestration-ului RAG, alături de retrieval, filtrare, generare și evaluare \cite{Gao2023RAGSurvey}.
 
 Un flux RAG tipic conține colectarea documentelor, segmentarea lor în fragmente, indexarea embeddings-urilor, interpretarea întrebării, recuperarea fragmentelor relevante, filtrarea și generarea răspunsului pe baza contextului selectat \cite{Lewis2020RAG,Gao2023RAGSurvey}. Această schemă nu elimină complet riscurile: dacă etapa de retrieval selectează surse slabe sau dacă rescrierea întrebării schimbă sensul inițial, modelul poate formula un răspuns slab. De aceea, UVT Asist păstrează întrebarea originală, validează interpretarea lingvistică produsă de model și folosește mecanisme deterministe pentru selecția surselor: retrieval Qdrant, backfill lexical, reranking și scor de încredere calculat pe snapshot-ul local indexat.
 
@@ -247,7 +247,7 @@ UVT Asist aplică și principiul degradării controlate. Dacă Ollama nu poate i
 \chapter{Analiza problemei și cerințe}
 
 \section{Ecosistemul UVT și riscurile informaționale}
-Ecosistemul web al UVT este format din mai multe surse oficiale: site-ul central, site-ul de admitere și site-urile facultăților. Din perspectiva unui sistem automat, această structură produce trei dificultăți. Prima este dispersia informației: unele răspunsuri sunt la nivelul universității, altele la nivelul facultății. A doua este eterogenitatea: paginile pot fi HTML, PDF, DOCX, text sau imagini care necesită OCR. A treia este dinamica informației: anumite pagini se schimbă periodic, în special cele legate de admitere, orare, burse sau calendare.
+Ecosistemul web al UVT este format din mai multe surse oficiale: site-ul central, site-ul de admitere și site-urile facultăților \cite{UVTWebsite,UVTAdmissionWebsite}. Din perspectiva unui sistem automat, această structură produce trei dificultăți. Prima este dispersia informației: unele răspunsuri sunt la nivelul universității, altele la nivelul facultății. A doua este eterogenitatea: paginile pot fi HTML, PDF, DOCX, text sau imagini care necesită OCR. A treia este dinamica informației: anumite pagini se schimbă periodic, în special cele legate de admitere, orare, burse sau calendare.
 
 Un student nu formulează întrebări în termenii interni ai site-ului. El poate întreba „care e programul secretariatului?”, „unde văd orarul la info?”, „pot primi două burse?” sau „unde mă înscriu la admitere?”. Sistemul trebuie să transforme aceste formulări într-o căutare controlată, să aleagă domeniul potrivit și să returneze sursa oficială relevantă.
 
@@ -479,7 +479,7 @@ Rezultatele indică o îmbunătățire consistentă pe setul definit de întreb�
 
 Îmbunătățirile provin din trei direcții principale: selecția mai deterministă a surselor oficiale, refuzul sau clarificarea în cazurile nesigure și optimizările care reduc latența pentru întrebările frecvente. Latența medie și latența mediană descriu aspecte diferite ale comportamentului sistemului. Media este sensibilă la câteva cazuri lente, în timp ce mediana descrie mai bine timpul tipic observat pentru o întrebare obișnuită din setul evaluat.
 
-Pentru o verificare mai largă, aplicația a fost evaluată ulterior pe un benchmark independent de 1000 de întrebări. În această evaluare, \texttt{ideal\_answer} este folosit ca rubrică de evaluare, nu ca text care trebuie reprodus exact. Evaluatorul automat analizează răspunsul și metadatele returnate de sistem: sursele, intenția, \texttt{page\_type}, nivelul de încredere, termenii obligatorii din \texttt{required\_terms} și termenii interziși din \texttt{forbidden\_terms}. Întrebările fără răspuns sigur sunt evaluate separat, deoarece un comportament corect poate însemna refuzul de a formula o afirmație factuală nesusținută.
+Pentru o verificare mai largă, aplicația a fost evaluată ulterior pe un benchmark independent de 1000 de întrebări. În această evaluare, \texttt{ideal\_answer} este folosit ca rubrică de evaluare, nu ca text care trebuie reprodus exact. Evaluatorul automat analizează răspunsul și metadatele returnate de sistem: sursele, intenția, \texttt{page\_type}, nivelul de încredere, termenii obligatorii din \texttt{required\_terms} și termenii interziși din \texttt{forbidden\_terms}. Această abordare este compatibilă cu perspectiva evaluărilor RAG, unde trebuie analizate împreună răspunsul, sursele recuperate, metadatele și comportamentul sistemului în cazuri fără răspuns sigur \cite{Gan2025RAGEvalSurvey}. Întrebările fără răspuns sigur sunt evaluate separat, deoarece un comportament corect poate însemna refuzul de a formula o afirmație factuală nesusținută.
 
 Tabelul \ref{tab:rezultate-globale-qa1000} sintetizează rezultatele globale ale benchmark-ului independent, incluzând rata de trecere, scorurile agregate, potrivirea surselor și absența erorilor tehnice.
 
@@ -515,41 +515,7 @@ Erori tehnice & 0 \\
 \label{tab:rezultate-globale-qa1000}
 \end{table}
 
-Tabelul \ref{tab:rezultate-categorii-qa1000} detaliază rata de trecere pentru fiecare categorie de întrebări, astfel încât performanța sistemului să poată fi analizată în funcție de tipul de nevoie informațională.
-
-\begin{table}[H]
-\centering
-\small
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedleft\arraybackslash}p{3cm}|}
-\hline
-\textbf{Categorie} & \textbf{Rată de trecere} \\
-\hline
-\texttt{admitere} & 80.0\% \\
-\hline
-\texttt{burse} & 65.0\% \\
-\hline
-\texttt{calendar\_academic} & 39.0\% \\
-\hline
-\texttt{cazare\_camine} & 87.0\% \\
-\hline
-\texttt{contact\_secretariat} & 92.0\% \\
-\hline
-\texttt{intrebari\_fara\_raspuns\_sigur} & 43.0\% \\
-\hline
-\texttt{intrebari\_vagi\_ambigue} & 16.0\% \\
-\hline
-\texttt{orar} & 68.0\% \\
-\hline
-\texttt{regulamente\_metodologii} & 59.0\% \\
-\hline
-\texttt{voluntariat\_credite} & 95.0\% \\
-\hline
-\end{tabularx}
-\caption{Rezultate pe categorii în benchmark-ul independent}
-\label{tab:rezultate-categorii-qa1000}
-\end{table}
-
-Figura \ref{fig:qa1000-rata-trecere-categorii} reprezintă grafic aceleași rezultate pe categorii, pentru a evidenția mai rapid diferențele dintre categoriile cu performanță ridicată și cele problematice.
+Figura \ref{fig:qa1000-rata-trecere-categorii} detaliază grafic rata de trecere pentru fiecare categorie de întrebări, astfel încât performanța sistemului să poată fi analizată în funcție de tipul de nevoie informațională și să fie evidențiate rapid diferențele dintre categoriile cu performanță ridicată și cele problematice.
 
 \begin{figure}[H]
 \centering
@@ -558,7 +524,19 @@ Figura \ref{fig:qa1000-rata-trecere-categorii} reprezintă grafic aceleași rezu
 \label{fig:qa1000-rata-trecere-categorii}
 \end{figure}
 
-Tabelul \ref{tab:latenta-benchmark-independent} prezintă valorile agregate ale latenței observate în benchmark, utile pentru interpretarea performanței operaționale a aplicației în regim local.
+Tabelul \ref{tab:latenta-benchmark-independent} prezintă valorile agregate ale latenței observate în benchmark, utile pentru interpretarea performanței operaționale a aplicației în regim local. Dacă notăm cu \(\ell_1,\ell_2,\ldots,\ell_n\) latențele individuale ale celor \(n\) întrebări și cu \(\ell_{(1)} \leq \ell_{(2)} \leq \ldots \leq \ell_{(n)}\) valorile sortate crescător, indicatorii sunt calculați astfel:
+\[
+\bar{\ell}=\frac{1}{n}\sum_{i=1}^{n}\ell_i,\qquad
+\operatorname{mediana}(L)=
+\begin{cases}
+\ell_{\left(\frac{n+1}{2}\right)}, & n \text{ impar},\\
+\frac{\ell_{\left(\frac{n}{2}\right)}+\ell_{\left(\frac{n}{2}+1\right)}}{2}, & n \text{ par},
+\end{cases}
+\]
+\[
+P90=\ell_{(\lceil 0.90n\rceil)},\qquad
+P95=\ell_{(\lceil 0.95n\rceil)}.
+\]
 
 \begin{table}[H]
 \centering

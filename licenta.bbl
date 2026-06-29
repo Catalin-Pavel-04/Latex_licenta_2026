@@ -25,6 +25,12 @@ Jeff Johnson, Matthijs Douze, and Herv{\'e} J{\'e}gou.
 \newblock Billion-scale similarity search with gpus.
 \newblock {\em arXiv preprint arXiv:1702.08734}, 2017.
 
+\bibitem[JLF{\etalchar{+}}23]{Ji2023Hallucination}
+Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii,
+  Ye~Jin Bang, Andrea Madotto, and Pascale Fung.
+\newblock Survey of hallucination in natural language generation.
+\newblock {\em ACM Computing Surveys}, 55(12):1--38, 2023.
+
 \bibitem[KOM{\etalchar{+}}20]{Karpukhin2020DPR}
 Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey
   Edunov, Danqi Chen, and Wen-tau Yih.
@@ -75,6 +81,18 @@ Stephen Robertson and Hugo Zaragoza.
 \newblock The probabilistic relevance framework: Bm25 and beyond.
 \newblock {\em Foundations and Trends in Information Retrieval}, 3(4):333--389,
   2009.
+
+\bibitem[{Uni}a]{UVTAdmissionWebsite}
+{Universitatea de Vest din Timișoara}.
+\newblock Admitere uvt.
+\newblock \url{https://admitere.uvt.ro/}.
+\newblock Accesat: 26 mai 2026.
+
+\bibitem[{Uni}b]{UVTWebsite}
+{Universitatea de Vest din Timișoara}.
+\newblock Site-ul oficial al universității de vest din timișoara.
+\newblock \url{https://www.uvt.ro/}.
+\newblock Accesat: 26 mai 2026.
 
 \bibitem[VSP{\etalchar{+}}17]{Vaswani2017Attention}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,

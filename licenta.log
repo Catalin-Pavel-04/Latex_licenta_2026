@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  29 JUN 2026 08:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  29 JUN 2026 08:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1052,7 +1052,7 @@ r-pre-tare ling-vis-tic 
 
 ] [15] [16]
 Capitolul 4.
-<imagini/figuri_lucrare/arhitectura_uvt_asist.png, id=267, 1006.962pt x 566.717
+<imagini/figuri_lucrare/arhitectura_uvt_asist.png, id=271, 1006.962pt x 566.717
 25pt>
 File: imagini/figuri_lucrare/arhitectura_uvt_asist.png Graphic file (type png)
 <use imagini/figuri_lucrare/arhitectura_uvt_asist.png>
@@ -1062,7 +1062,7 @@ Package pdftex.def Info: imagini/figuri_lucrare/arhitectura_uvt_asist.png  used
 [17
 
  <./imagini/figuri_lucrare/arhitectura_uvt_asist.png>]
-<imagini/figuri_lucrare/diagrama_structura_proiect_uvt_asist.png, id=276, 1453.
+<imagini/figuri_lucrare/diagrama_structura_proiect_uvt_asist.png, id=280, 1453.
 43pt x 1090.0725pt>
 File: imagini/figuri_lucrare/diagrama_structura_proiect_uvt_asist.png Graphic f
 ile (type png)
@@ -1072,7 +1072,7 @@ asist.png  used on input line 298.
 (pdftex.def)             Requested size: 424.06033pt x 318.04237pt.
  [18 <./imagini/figuri_lucrare/diagrama_structura_proiect_uvt_asist.png (PNG co
 py)>]
-<imagini/figuri_lucrare/diagrama_model_fragment_indexat.png, id=285, 1453.43pt 
+<imagini/figuri_lucrare/diagrama_model_fragment_indexat.png, id=289, 1453.43pt 
 x 1090.0725pt>
 File: imagini/figuri_lucrare/diagrama_model_fragment_indexat.png Graphic file (
 type png)
@@ -1081,7 +1081,7 @@ Package pdftex.def Info: imagini/figuri_lucrare/diagrama_model_fragment_indexat
 .png  used on input line 310.
 (pdftex.def)             Requested size: 424.06033pt x 318.04237pt.
  [19 <./imagini/figuri_lucrare/diagrama_model_fragment_indexat.png (PNG copy)>]
-<imagini/figuri_lucrare/pipeline_indexare_uvt_asist.png, id=295, 1678.27pt x 94
+<imagini/figuri_lucrare/pipeline_indexare_uvt_asist.png, id=299, 1678.27pt x 94
 4.52875pt>
 File: imagini/figuri_lucrare/pipeline_indexare_uvt_asist.png Graphic file (type
  png)
@@ -1091,7 +1091,7 @@ Package pdftex.def Info: imagini/figuri_lucrare/pipeline_indexare_uvt_asist.png
 (pdftex.def)             Requested size: 402.85602pt x 226.72035pt.
  [20 <./imagini/figuri_lucrare/pipeline_indexare_uvt_asist.png (PNG copy)>] [21
 ]
-<imagini/figuri_lucrare/flux_interogare_uvt_asist.png, id=308, 1678.27pt x 944.
+<imagini/figuri_lucrare/flux_interogare_uvt_asist.png, id=312, 1678.27pt x 944.
 52875pt>
 File: imagini/figuri_lucrare/flux_interogare_uvt_asist.png Graphic file (type p
 ng)
@@ -1101,7 +1101,7 @@ used on input line 353.
 (pdftex.def)             Requested size: 402.85602pt x 226.72035pt.
  [22 <./imagini/figuri_lucrare/flux_interogare_uvt_asist.png (PNG copy)>] [23]
 Capitolul 5.
-<imagini/figuri_lucrare/popup_extensie_chrome.png, id=320, 1678.27pt x 944.5287
+<imagini/figuri_lucrare/popup_extensie_chrome.png, id=324, 1678.27pt x 944.5287
 5pt>
 File: imagini/figuri_lucrare/popup_extensie_chrome.png Graphic file (type png)
 <use imagini/figuri_lucrare/popup_extensie_chrome.png>
@@ -1111,7 +1111,7 @@ Package pdftex.def Info: imagini/figuri_lucrare/popup_extensie_chrome.png  used
 [24
 
 ]
-<imagini/figuri_lucrare/diagrama_endpointuri_backend_flask.png, id=328, 1453.43
+<imagini/figuri_lucrare/diagrama_endpointuri_backend_flask.png, id=332, 1453.43
 pt x 1090.0725pt>
 File: imagini/figuri_lucrare/diagrama_endpointuri_backend_flask.png Graphic fil
 e (type png)
@@ -1133,7 +1133,7 @@ Underfull \hbox (badness 1226) in paragraph at lines 392--393
 
 [26 <./imagini/figuri_lucrare/diagrama_endpointuri_backend_flask.png (PNG copy)
 >]
-<imagini/figuri_lucrare/raspuns_surse_confidence.png, id=340, 1678.27pt x 944.5
+<imagini/figuri_lucrare/raspuns_surse_confidence.png, id=344, 1678.27pt x 944.5
 2875pt>
 File: imagini/figuri_lucrare/raspuns_surse_confidence.png Graphic file (type pn
 g)
@@ -1146,7 +1146,7 @@ Capitolul 6.
 [28
 
 ]
-<imagini/figuri_lucrare/diagrama_evaluare_qa1000.png, id=351, 1006.35976pt x 56
+<imagini/figuri_lucrare/diagrama_evaluare_qa1000.png, id=355, 1006.35976pt x 56
 6.71725pt>
 File: imagini/figuri_lucrare/diagrama_evaluare_qa1000.png Graphic file (type pn
 g)
@@ -1155,7 +1155,7 @@ Package pdftex.def Info: imagini/figuri_lucrare/diagrama_evaluare_qa1000.png  u
 sed on input line 425.
 (pdftex.def)             Requested size: 424.06033pt x 238.80653pt.
  [29 <./imagini/figuri_lucrare/diagrama_evaluare_qa1000.png>]
-<imagini/figuri_lucrare/qa100_rezultate_inainte_dupa.png, id=361, 1678.27pt x 9
+<imagini/figuri_lucrare/qa100_rezultate_inainte_dupa.png, id=365, 1678.27pt x 9
 44.52875pt>
 File: imagini/figuri_lucrare/qa100_rezultate_inainte_dupa.png Graphic file (typ
 e png)
@@ -1165,138 +1165,137 @@ g  used on input line 473.
 (pdftex.def)             Requested size: 402.85602pt x 226.72035pt.
  [30] [31 <./imagini/figuri_lucrare/qa100_rezultate_inainte_dupa.png (PNG copy)
 >]
-<imagini/evaluation/qa1000_pass_rate_by_category.png, id=379, 794.97pt x 462.52
+<imagini/evaluation/qa1000_pass_rate_by_category.png, id=384, 794.97pt x 462.52
 8pt>
 File: imagini/evaluation/qa1000_pass_rate_by_category.png Graphic file (type pn
 g)
 <use imagini/evaluation/qa1000_pass_rate_by_category.png>
 Package pdftex.def Info: imagini/evaluation/qa1000_pass_rate_by_category.png  u
-sed on input line 556.
+sed on input line 522.
 (pdftex.def)             Requested size: 390.13472pt x 226.99358pt.
- [32]
-<imagini/evaluation/qa1000_average_latency_by_category.png, id=388, 794.97pt x 
+ [32 <./imagini/evaluation/qa1000_pass_rate_by_category.png>]
+<imagini/evaluation/qa1000_average_latency_by_category.png, id=395, 794.97pt x 
 462.528pt>
 File: imagini/evaluation/qa1000_average_latency_by_category.png Graphic file (t
 ype png)
 <use imagini/evaluation/qa1000_average_latency_by_category.png>
 Package pdftex.def Info: imagini/evaluation/qa1000_average_latency_by_category.
-png  used on input line 587.
+png  used on input line 565.
 (pdftex.def)             Requested size: 390.13472pt x 226.99358pt.
-
-[33 <./imagini/evaluation/qa1000_pass_rate_by_category.png>]
-<imagini/evaluation/qa1000_generation_mode_distribution.png, id=397, 632.3625pt
+ [33{C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathe
+x.enc} <./imagini/evaluation/qa1000_average_latency_by_category.png>]
+<imagini/evaluation/qa1000_generation_mode_distribution.png, id=407, 632.3625pt
  x 397.485pt>
 File: imagini/evaluation/qa1000_generation_mode_distribution.png Graphic file (
 type png)
 <use imagini/evaluation/qa1000_generation_mode_distribution.png>
 Package pdftex.def Info: imagini/evaluation/qa1000_generation_mode_distribution
-.png  used on input line 602.
+.png  used on input line 580.
 (pdftex.def)             Requested size: 347.73257pt x 218.57497pt.
- [34 <./imagini/evaluation/qa1000_average_latency_by_category.png>]
-<imagini/evaluation/qa1000_retrieval_backend_distribution.png, id=405, 505.89pt
+<imagini/evaluation/qa1000_retrieval_backend_distribution.png, id=409, 505.89pt
  x 397.485pt>
 File: imagini/evaluation/qa1000_retrieval_backend_distribution.png Graphic file
  (type png)
 <use imagini/evaluation/qa1000_retrieval_backend_distribution.png>
 Package pdftex.def Info: imagini/evaluation/qa1000_retrieval_backend_distributi
-on.png  used on input line 611.
+on.png  used on input line 589.
 (pdftex.def)             Requested size: 305.32394pt x 239.89995pt.
- [35 <./imagini/evaluation/qa1000_generation_mode_distribution.png> <./imagini/
-evaluation/qa1000_retrieval_backend_distribution.png>] [36] [37]
+ [34 <./imagini/evaluation/qa1000_generation_mode_distribution.png>] [35 <./ima
+gini/evaluation/qa1000_retrieval_backend_distribution.png>] [36]
 Capitolul 7.
-[38
+[37
 
-] [39] (licenta.bbl
-Underfull \hbox (badness 1237) in paragraph at lines 49--53
+] [38] (licenta.bbl [39
+
+
+]
+Underfull \hbox (badness 1237) in paragraph at lines 55--59
 []\T1/lmr/m/n/12 Ollama.  Ol-lama do-cu-men-ta-tion.  []$\T1/lmtt/m/n/12 https 
 : / / github . com / ollama /
  []
 
-[40
 
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 []\T1/lmr/m/n/12 Pallets Pro-jects.  Flask do-cu-men-ta-tion.  []$\T1/lmtt/m/n/
 12 https : / / flask .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 []\T1/lmr/m/n/12 Qdrant.  Qdrant do-cu-men-ta-tion.  []$\T1/lmtt/m/n/12 https :
  / / qdrant . tech /
  []
 
-) [41]
+) [40]
 Anexa A.
 
-Underfull \hbox (badness 1142) in paragraph at lines 671--671
+Underfull \hbox (badness 1142) in paragraph at lines 649--649
 []|\T1/lmr/m/n/10.95 Zone în care a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 []|\T1/lmr/m/n/10.95 Sprijin pen-tru
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 tu-lui, su-ges-tii
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 for-mu-l ri de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 documenta[]ie
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 671--671
+Underfull \hbox (badness 5008) in paragraph at lines 649--649
 []\T1/lmr/m/n/10.95 i ve-ri-fi-c ri de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 documenta[]ia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 pro-iec-tu-lui []i
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 struc-tu-rare a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 este tra-tat ca
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 671--671
+Underfull \hbox (badness 4981) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 surs  bi-bli-o-gra-
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 671--671
+Underfull \hbox (badness 2310) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 fic  []i nu este
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 \T1/lmr/m/n/10.95 re-zul-ta-tele au
  []
 
-[42
+[41
 
-] [43] (licenta.aux)
+] [42] (licenta.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1305,31 +1304,35 @@ Package rerunfilecheck Info: File `licenta.out' has not changed.
 (rerunfilecheck)             Checksum: F94BEFA84BA5026F30A651C7988F0F20;6469.
  ) 
 Here is how much of TeX's memory you used:
- 25003 strings out of 467871
- 460558 string characters out of 5417408
- 860095 words of memory out of 5000000
- 53251 multiletter control sequences out of 15000+600000
- 726362 words of font info for 118 fonts, out of 8000000 for 9000
+ 25010 strings out of 467871
+ 460696 string characters out of 5417408
+ 860257 words of memory out of 5000000
+ 53255 multiletter control sequences out of 15000+600000
+ 729035 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,94p,913b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,94p,939b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.
 pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx1
 2.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb
 x6.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
 bx7.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mmi12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmr10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
-m/lmr12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr5.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr6.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr8.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmri12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmsy10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmtt10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmtt12.pfb>
-Output written on licenta.pdf (43 pages, 14384213 bytes).
+mex10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmmi12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi6.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmmi8.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmr10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmr12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmr5.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmr6.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmr8.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmri12.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmsy10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmsy8.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmtt10.pfb><C:/Users/Catalin/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmtt12.pfb>
+Output written on licenta.pdf (42 pages, 14436627 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
+ 553 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
  313 words of extra memory for PDF output out of 10000 (max. 10000000)
 
