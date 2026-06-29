@@ -190,17 +190,9 @@ Asistenții conversaționali bazați pe modele de limbaj sunt utili pentru inter
 
 Pe baza acestei probleme, scopul lucrării este proiectarea și realizarea unui prototip funcțional pentru un asistent digital care facilitează accesul la informațiile oficiale UVT. Prototipul urmărește să fie util în situații frecvente pentru studenți: găsirea orarului, identificarea datelor de contact, orientarea către informații despre admitere, consultarea paginilor despre burse, regulamente sau alte resurse administrative.
 
-Obiectivele principale sunt:
-\begin{itemize}
-    \item proiectarea unei arhitecturi locale, în care extensia Chrome reprezintă interfața principală, iar backend-ul Flask orchestrează căutarea și generarea răspunsului;
-    \item construirea unui index local din pagini oficiale UVT și din paginile facultăților;
-    \item utilizarea embeddings-urilor și a unei baze vectoriale pentru regăsire semantică;
-    \item folosirea Ollama pentru interpretarea lingvistică structurată a întrebării, cu validare în backend și fallback pe întrebarea originală;
-    \item filtrarea rezultatelor în funcție de facultate și de tipul paginii;
-    \item combinarea scorurilor semantice cu reguli deterministe de reranking pentru a prioritiza sursele potrivite;
-    \item generarea unor răspunsuri concise, în limba română, însoțite de sursele oficiale folosite;
-    \item tratarea explicită a cazurilor cu încredere scăzută, fără a inventa informații nesusținute de surse.
-\end{itemize}
+Obiectivele principale ale lucrării vizează proiectarea unei arhitecturi locale în care extensia Chrome reprezintă interfața principală, iar backend-ul Flask orchestrează căutarea și generarea răspunsului. În acest scop, proiectul urmărește construirea unui index local pornind de la pagini oficiale UVT și de la paginile facultăților, utilizarea embeddings-urilor și a unei baze vectoriale pentru regăsire semantică, precum și folosirea Ollama pentru interpretarea lingvistică structurată a întrebării, cu validare în backend și fallback pe întrebarea originală.
+
+Un alt obiectiv important îl constituie filtrarea rezultatelor în funcție de facultate și de tipul paginii, urmată de combinarea scorurilor semantice cu reguli deterministe de reranking pentru prioritizarea surselor potrivite. Sistemul urmărește să genereze răspunsuri concise, în limba română, însoțite de sursele oficiale folosite, și să trateze explicit cazurile cu încredere scăzută, fără a inventa informații nesusținute de surse.
 
 Contribuția principală a lucrării constă în proiectarea unei soluții aplicate, adaptate ecosistemului UVT, care combină o interfață ușor de folosit cu un mecanism local de retrieval și generare. Față de o simplă căutare pe site, sistemul acceptă întrebări naturale, folosește interpretare lingvistică pentru typo-uri și formulări imperfecte, apoi prioritizează sursele prin reguli deterministe. Față de un chatbot generic, sistemul păstrează legătura cu sursele oficiale și comunică nivelul de încredere al răspunsului.
 
@@ -257,17 +249,9 @@ Riscul principal într-un asistent instituțional este producerea unei concluzii
 Un al doilea risc este alegerea unei surse oficiale, dar nepotrivite. O pagină a unei facultăți poate fi oficială, însă nu răspunde întrebării generale. O metodologie veche poate fi oficială, dar nu neapărat actuală. O știre despre admitere poate fi oficială, dar depășită. De aceea, proiectul nu folosește doar criteriul „domeniu oficial”, ci combină domeniul cu tipul paginii, titlul, URL-ul, conținutul și intenția interpretată și validată.
 
 \section{Cerințe funcționale și nefuncționale}
-Cerințele funcționale urmărite în proiect sunt:
-\begin{itemize}
-    \item utilizatorul poate selecta facultatea relevantă sau poate lucra în contextul general UVT;
-    \item utilizatorul poate trimite întrebări în limbaj natural din popup-ul extensiei;
-    \item backend-ul trimite întrebarea către Ollama pentru interpretare lingvistică structurată, apoi validează câmpurile \texttt{corrected\_question}, \texttt{intent}, \texttt{keywords} și \texttt{faculty\_hint};
-    \item sistemul recuperează fragmente relevante din indexul local și le ordonează după scor;
-    \item răspunsul include surse oficiale distincte, afișate clar în interfață;
-    \item pentru întrebări ambigue, sistemul poate cere alegerea unei facultăți;
-    \item aplicația expune starea componentelor prin endpoint-uri de health și status;
-    \item utilizatorul poate oferi feedback asupra răspunsului primit.
-\end{itemize}
+Cerințele funcționale urmărite în proiect descriu modul în care utilizatorul interacționează cu sistemul și modul în care backend-ul procesează întrebările. Utilizatorul poate selecta facultatea relevantă sau poate lucra în contextul general UVT, apoi poate trimite întrebări în limbaj natural din popup-ul extensiei. Backend-ul transmite întrebarea către Ollama pentru interpretare lingvistică structurată și validează câmpurile \texttt{corrected\_question}, \texttt{intent}, \texttt{keywords} și \texttt{faculty\_hint}, astfel încât rezultatul modelului să fie tratat ca intrare controlată pentru căutare.
+
+După interpretare, sistemul recuperează fragmente relevante din indexul local și le ordonează după scor, iar răspunsul returnat include surse oficiale distincte, afișate clar în interfață. Pentru întrebările ambigue, aplicația poate solicita alegerea unei facultăți, reducând riscul de a oferi un răspuns dintr-un context instituțional nepotrivit. De asemenea, aplicația expune starea componentelor prin endpoint-uri de health și status, iar utilizatorul poate oferi feedback asupra răspunsului primit.
 
 Pe lângă funcționalități, proiectul impune cerințe nefuncționale importante. Sistemul trebuie să favorizeze sursele oficiale, să evite afirmațiile nesusținute, să funcționeze local, să degradeze controlat atunci când Qdrant sau Ollama nu sunt disponibile și să rămână utilizabil chiar dacă indexarea este în curs. O altă cerință este transparența: utilizatorul trebuie să vadă sursele, iar backend-ul trebuie să atașeze metadate despre încredere, modul de retrieval, modul de generare, profilul dovezilor, întrebarea originală și întrebarea interpretată.
 
@@ -514,39 +498,6 @@ Mediu hardware & Laptop local cu Windows 11 Pro 64-bit, CPU \texttt{12th Gen Int
 
 Prima evaluare cantitativă folosită în proiect a fost setul Q\&A de 100 de întrebări definit intern. Fiecare întrebare a fost trimisă către endpoint-ul de chat, iar evaluatorul a verificat scorul Q\&A, sursele returnate, potrivirea nivelului de încredere, comportamentul pentru întrebări fără răspuns sigur și latența. Raportarea compară rezultatele înainte și după optimizările aplicate asupra selecției surselor, reranking-ului, tratării întrebărilor vagi și controlului generării.
 
-\begin{table}[H]
-\centering
-\small
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedleft\arraybackslash}p{2.25cm}|>{\raggedleft\arraybackslash}p{2.25cm}|>{\raggedleft\arraybackslash}p{2.35cm}|}
-\hline
-\textbf{Indicator} & \textbf{Înainte} & \textbf{După} & \textbf{Diferență} \\
-\hline
-Întrebări evaluate & 100 & 100 & 0 \\
-\hline
-Răspunsuri trecute & 65/100 & 100/100 & +35 \\
-\hline
-Rata de trecere & 65\% & 100\% & +35 pp \\
-\hline
-Scor mediu Q\&A & 69.54 & 85.84 & +16.30 \\
-\hline
-Scor median Q\&A & 82.0 & 85.0 & +3.0 \\
-\hline
-Top-1 URL corect & 98/100 & 100/100 & +2 \\
-\hline
-Top-3 URL corect & 98/100 & 100/100 & +2 \\
-\hline
-Potrivire nivel de încredere & 83/100 & 99/100 & +16 \\
-\hline
-Întrebări fără răspuns sigur tratate corect & 1/10 & 10/10 & +9 \\
-\hline
-Latență medie & 27.182 s & 13.679 s & -13.503 s \\
-\hline
-Latență mediană & 37.689 s & 4.342 s & -33.347 s \\
-\hline
-\end{tabularx}
-\caption{Rezultate comparative pe setul Q\&A de 100 de întrebări}
-\end{table}
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{imagini/figuri_lucrare/qa100_rezultate_inainte_dupa.png}
@@ -683,16 +634,14 @@ O amenințare la validitate este dimensiunea setului de întrebări folosit pent
 
 Prototipul rulează local și nu trimite întrebările către un serviciu AI extern. Acest lucru este un avantaj pentru confidențialitate, dar nu elimină toate responsabilitățile. Backend-ul acceptă cereri HTTP locale, deci trebuie tratat ca un serviciu de dezvoltare, nu ca un server expus public. Feedback-ul este salvat local în format JSONL și poate conține întrebări formulate liber de utilizatori, motiv pentru care o versiune distribuită ar trebui să includă reguli de retenție, anonimizare și informare.
 
-\chapter{Concluzii}
+\chapter{Concluzii și direcții viitoare de dezvoltare}
 
-\section{Concluzii generale}
 Lucrarea a prezentat proiectarea unui asistent inteligent local pentru accesul la informațiile oficiale UVT. Problema abordată este una practică: informația există, dar este distribuită între mai multe site-uri și nu este întotdeauna ușor de găsit rapid. UVT Asist propune o interfață conversațională integrată în browser, susținută de un backend care caută în indexul local, selectează surse oficiale și sintetizează răspunsuri pe baza acestora.
 
 Din punct de vedere teoretic, soluția se bazează pe combinarea regăsirii informației cu modelele de limbaj. Căutarea semantică oferă flexibilitate, interpretarea lingvistică locală ajută la tratarea typo-urilor și a întrebărilor incomplete, iar regulile deterministe oferă control asupra selecției surselor. Prin afișarea surselor, scorului de încredere și metadatelor despre modul de retrieval, sistemul urmărește să rămână transparent și prudent.
 
 Prototipul demonstrează că o arhitectură RAG locală este fezabilă pentru un scenariu universitar. Totuși, calitatea finală depinde de acoperirea indexului, de actualizarea surselor și de evaluarea continuă pe întrebări reale. Rezultatele trebuie citite ca verificare pe seturile de evaluare definite în proiect, nu ca garanție universală pentru orice întrebare posibilă.
 
-\section{Contribuții și rezultate obținute}
 Contribuția principală constă în construirea unei soluții aplicate pentru ecosistemul UVT, cu extensie Chrome, backend Flask modular, index local, Qdrant, Ollama pentru interpretare și generare controlată, plus mecanisme de reranking determinist. Structura actuală separă rutele HTTP, serviciile, configurația, analiza RAG și ranking-ul, ceea ce face aplicația mai ușor de testat și de extins.
 
 La nivel funcțional, sistemul oferă selecția facultății, istoric conversațional, întrebări recente, afișarea surselor oficiale, nivel de încredere, indicatori pentru indexul local și feedback. La nivel de siguranță, aplicația poate refuza sau limita răspunsul atunci când dovezile oficiale sunt slabe, evitând formularea unor afirmații speculative.
@@ -701,7 +650,6 @@ Pe setul Q\&A de 100 de întrebări definit în proiect, rata de trecere a cresc
 
 Evaluarea independentă pe 1000 de întrebări a oferit o imagine mai strictă asupra comportamentului sistemului. Aplicația a generat răspuns pentru toate întrebările și nu a produs erori tehnice, însă rata de trecere a fost 64.4\%, cu scor mediu 72.34 și scor median 82.35. Rezultatele cele mai bune au fost în categoriile \texttt{voluntariat\_credite}, \texttt{contact\_secretariat}, \texttt{cazare\_camine} și \texttt{admitere}, iar rezultatele cele mai slabe în \texttt{intrebari\_vagi\_ambigue}, \texttt{calendar\_academic} și \texttt{intrebari\_fara\_raspuns\_sigur}. Aceste valori arată că sistemul este funcțional, dar încă sensibil la întrebări ambigue și la situații în care răspunsul sigur trebuie delimitat mai strict.
 
-\section{Direcții viitoare}
 Direcțiile de dezvoltare includ reindexare programată, monitorizarea modificărilor în sursele oficiale, extinderea setului de teste, evaluare cu studenți reali și îmbunătățirea OCR-ului pentru documente scanate. Pe baza benchmark-ului independent, prioritățile tehnice sunt tratarea întrebărilor vagi, îmbunătățirea acoperirii pentru calendarul academic și refuzul mai precis al întrebărilor fără răspuns sigur. O altă direcție utilă este construirea unui set standard de întrebări și răspunsuri de referință, pentru a compara obiectiv variante diferite de interpretare lingvistică, embedding, reranking și modele generative.
 
 La nivel de interfață, extensia poate fi extinsă cu explicații mai clare pentru întrebările neacoperite, gruparea surselor pe categorii și sugestii de reformulare. La nivel de backend, ar fi utilă separarea mai explicită între răspunsuri de navigare, răspunsuri administrative și răspunsuri de regulament, astfel încât fiecare categorie să aibă reguli de verificare adaptate.
@@ -713,17 +661,6 @@ La nivel de interfață, extensia poate fi extinsă cu explicații mai clare pen
 \bibliography{mybib}
 
 \appendix
-\chapter{Plan de activitate}
-Activitatea de realizare a lucrării a fost organizată în etape succesive:
-
-\begin{itemize}
-    \item \textbf{Decembrie -- Ianuarie:} documentare și analiză. Au fost studiate conceptele de bază privind asistenții conversaționali, extensiile Google Chrome, arhitectura web a UVT, retrieval-ul și modelele conversaționale.
-    \item \textbf{Ianuarie -- Februarie:} proiectare arhitecturală. Au fost definite componentele sistemului, fluxul de procesare, structura extensiei și responsabilitățile backend-ului.
-    \item \textbf{Februarie -- Martie:} implementarea primelor componente. Au fost dezvoltate extensia Chrome, endpoint-urile Flask și mecanismele inițiale de căutare și răspuns.
-    \item \textbf{Aprilie:} integrarea cu sursele oficiale UVT. Au fost dezvoltate mecanismele de indexare, extragere a textului, segmentare, clasificare a paginilor și căutare în surse oficiale.
-    \item \textbf{Mai -- Iunie:} rafinare, testare și redactare. Au fost adăugate Qdrant, embeddings locale, reranking determinist, scor de încredere, stări de interfață, feedback și textul final al lucrării.
-\end{itemize}
-
 \chapter{Utilizarea instrumentelor de inteligență artificială generativă}
 \label{genAIUsage}
 În această anexă este prezentată o sinteză a modului în care au fost utilizate instrumentele de inteligență artificială generativă în cadrul lucrării și al proiectului software asociat. Instrumentele AI au fost folosite ca sprijin auxiliar pentru organizare, verificări de coerență și sugestii tehnice. Codul, structura finală, interpretarea rezultatelor și textul final au fost revizuite și asumate de autor.

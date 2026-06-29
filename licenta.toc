@@ -1,30 +1,26 @@
 \babel@toc {romanian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introducere}{8}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Fundamente teoretice}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Regăsirea informației și căutarea semantică}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Modele de limbaj și RAG}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Rulare locală, extensii browser și calitatea surselor}{13}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Analiza problemei și cerințe}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Ecosistemul UVT și riscurile informaționale}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Cerințe funcționale și nefuncționale}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Criterii de acceptare}{17}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Arhitectura și implementarea sistemului}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Arhitectura generală și structura proiectului}{18}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Indexare, model de date și stocare vectorială}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Fluxul de interogare, retrieval, reranking și generare}{21}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Interfață și funcționalități}{24}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Extensia Chrome și experiența de utilizare}{24}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Backend, endpointuri, configurare și observabilitate}{25}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Răspunsuri, surse, feedback și degradare controlată}{26}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Validare și evaluare}{28}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Testare automată și scenarii manuale}{28}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Evaluare pe seturi de întrebări}{29}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Limite, amenințări la validitate, securitate și confidențialitate}{35}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Concluzii}{36}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Concluzii generale}{36}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Contribuții și rezultate obținute}{36}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Direcții viitoare}{37}{section.7.3}%
-\contentsline {chapter}{Bibliografie}{38}{section*.5}%
-\contentsline {chapter}{\numberline {A}Plan de activitate}{40}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Utilizarea instrumentelor de inteligență artificială generativă}{41}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Detalii privind utilizarea OpenAI Codex / ChatGPT}{41}{section.B.1}%
+\contentsline {chapter}{\numberline {1}Introducere}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Fundamente teoretice}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Regăsirea informației și căutarea semantică}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Modele de limbaj și RAG}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Rulare locală, extensii browser și calitatea surselor}{12}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Analiza problemei și cerințe}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Ecosistemul UVT și riscurile informaționale}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Cerințe funcționale și nefuncționale}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Criterii de acceptare}{16}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Arhitectura și implementarea sistemului}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Arhitectura generală și structura proiectului}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Indexare, model de date și stocare vectorială}{19}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Fluxul de interogare, retrieval, reranking și generare}{20}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Interfață și funcționalități}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Extensia Chrome și experiența de utilizare}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Backend, endpointuri, configurare și observabilitate}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Răspunsuri, surse, feedback și degradare controlată}{25}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Validare și evaluare}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Testare automată și scenarii manuale}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Evaluare pe seturi de întrebări}{28}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Limite, amenințări la validitate, securitate și confidențialitate}{33}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Concluzii și direcții viitoare de dezvoltare}{35}{chapter.7}%
+\contentsline {chapter}{Bibliografie}{37}{section*.5}%
+\contentsline {chapter}{\numberline {A}Utilizarea instrumentelor de inteligență artificială generativă}{39}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Detalii privind utilizarea OpenAI Codex / ChatGPT}{39}{section.A.1}%
