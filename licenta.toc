@@ -12,15 +12,15 @@
 \contentsline {section}{\numberline {4.1}Arhitectura generală și structura proiectului}{17}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Indexare, model de date și stocare vectorială}{19}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Fluxul de interogare, retrieval, reranking și generare}{20}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Interfață și funcționalități}{23}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Extensia Chrome și experiența de utilizare}{23}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Backend, endpointuri, configurare și observabilitate}{24}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Răspunsuri, surse, feedback și degradare controlată}{25}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Validare și evaluare}{27}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Testare automată și scenarii manuale}{27}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Evaluare pe seturi de întrebări}{28}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Limite, amenințări la validitate, securitate și confidențialitate}{33}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Concluzii și direcții viitoare de dezvoltare}{35}{chapter.7}%
-\contentsline {chapter}{Bibliografie}{37}{section*.5}%
-\contentsline {chapter}{\numberline {A}Utilizarea instrumentelor de inteligență artificială generativă}{39}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Detalii privind utilizarea OpenAI Codex / ChatGPT}{39}{section.A.1}%
+\contentsline {chapter}{\numberline {5}Interfață și funcționalități}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Extensia Chrome și experiența de utilizare}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Backend, endpointuri, configurare și observabilitate}{25}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Răspunsuri, surse, feedback și degradare controlată}{26}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Validare și evaluare}{28}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Testare automată și scenarii manuale}{28}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Evaluare pe seturi de întrebări}{29}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Limite, amenințări la validitate, securitate și confidențialitate}{36}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Concluzii și direcții viitoare de dezvoltare}{38}{chapter.7}%
+\contentsline {chapter}{Bibliografie}{40}{section*.5}%
+\contentsline {chapter}{\numberline {A}Utilizarea instrumentelor de inteligență artificială generativă}{42}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Detalii privind utilizarea OpenAI Codex / ChatGPT}{42}{section.A.1}%
